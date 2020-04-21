@@ -2,3 +2,6 @@
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
 "PhotosViewController.navigationTitle" = "Photos";
+"TutorialIntroView.headerText" = "Welcome to\nDebigulator";
+"TutorialIntroView.bodyText" = "Lorem ipsum dolor sit amet";
+"TutorialIntroStartButton.title" = "Grant Access";

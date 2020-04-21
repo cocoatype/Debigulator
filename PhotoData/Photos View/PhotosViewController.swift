@@ -15,8 +15,7 @@ public class PhotosViewController: UIViewController, UICollectionViewDelegate {
         navigationItem.title = Self.navigationTitle
     }
 
-    override public func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    public func requestPhotoPermissions() {
         requester.requestAuthorization { [weak self] status in
             self?.collectionView.reloadData()
         }

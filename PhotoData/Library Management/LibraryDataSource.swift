@@ -20,6 +20,8 @@ class LibraryDataSource: NSObject {
     var photosCount: Int { allPhotos.count }
 
     private func fetchAllPhotos() -> PHFetchResult<PHAsset> {
+        guard PHPhotoLibrary.authorizationStatus() == .authorized else { return PHFetchResult() }
+
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return PHAsset.fetchAssets(with: fetchOptions)

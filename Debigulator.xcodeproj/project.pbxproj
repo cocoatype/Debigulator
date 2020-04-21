@@ -35,6 +35,15 @@
 		04937636244E97750018B6F3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937635244E97750018B6F3 /* NavigationController.swift */; };
 		04937638244E98B50018B6F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04937637244E98B50018B6F3 /* Localizable.strings */; };
 		0493763A244E9C380018B6F3 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */; };
+		04937645244E9D0F0018B6F3 /* TutorialIntroStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493763E244E9D0F0018B6F3 /* TutorialIntroStartButton.swift */; };
+		04937646244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */; };
+		04937647244E9D0F0018B6F3 /* TutorialIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */; };
+		04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */; };
+		04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */; };
+		0493764A244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */; };
+		0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */; };
+		0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493764C244E9D3D0018B6F3 /* Defaults.swift */; };
+		04937651244E9FF20018B6F3 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +143,17 @@
 		04937635244E97750018B6F3 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		04937637244E98B50018B6F3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearance.swift; sourceTree = "<group>"; };
+		0493763E244E9D0F0018B6F3 /* TutorialIntroStartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroStartButton.swift; sourceTree = "<group>"; };
+		0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroBodyLabel.swift; sourceTree = "<group>"; };
+		04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroViewController.swift; sourceTree = "<group>"; };
+		04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroHeaderLabel.swift; sourceTree = "<group>"; };
+		04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroDismissButton.swift; sourceTree = "<group>"; };
+		04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroButtonsStackView.swift; sourceTree = "<group>"; };
+		04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroView.swift; sourceTree = "<group>"; };
+		0493764C244E9D3D0018B6F3 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		0493764E244E9D850018B6F3 /* Debigulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Debigulator.entitlements; sourceTree = "<group>"; };
+		0493764F244E9D9B0018B6F3 /* MessageExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageExtension.entitlements; sourceTree = "<group>"; };
+		04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +208,8 @@
 		049375B7243198B20018B6F3 /* Debigulator */ = {
 			isa = PBXGroup;
 			children = (
+				0493764E244E9D850018B6F3 /* Debigulator.entitlements */,
+				0493763D244E9D0F0018B6F3 /* Intro */,
 				049375B8243198B20018B6F3 /* AppDelegate.swift */,
 				049375BA243198B20018B6F3 /* SceneDelegate.swift */,
 				049375BC243198B20018B6F3 /* SceneViewController.swift */,
@@ -198,6 +220,7 @@
 				04937635244E97750018B6F3 /* NavigationController.swift */,
 				04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */,
 				04937637244E98B50018B6F3 /* Localizable.strings */,
+				0493764C244E9D3D0018B6F3 /* Defaults.swift */,
 			);
 			path = Debigulator;
 			sourceTree = "<group>";
@@ -236,6 +259,7 @@
 		04937600244E8CC20018B6F3 /* MessageExtension */ = {
 			isa = PBXGroup;
 			children = (
+				0493764F244E9D9B0018B6F3 /* MessageExtension.entitlements */,
 				04937601244E8CC20018B6F3 /* MessagesViewController.swift */,
 				04937606244E8CC20018B6F3 /* Assets.xcassets */,
 				04937608244E8CC20018B6F3 /* Info.plist */,
@@ -253,6 +277,21 @@
 				04937617244E8D840018B6F3 /* Info.plist */,
 			);
 			path = PhotoData;
+			sourceTree = "<group>";
+		};
+		0493763D244E9D0F0018B6F3 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				0493763E244E9D0F0018B6F3 /* TutorialIntroStartButton.swift */,
+				0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */,
+				04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */,
+				04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */,
+				04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */,
+				04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */,
+				04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */,
+				04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,12 +441,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */,
+				0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */,
 				049375BD243198B20018B6F3 /* SceneViewController.swift in Sources */,
 				049375B9243198B20018B6F3 /* AppDelegate.swift in Sources */,
 				04937636244E97750018B6F3 /* NavigationController.swift in Sources */,
+				04937647244E9D0F0018B6F3 /* TutorialIntroViewController.swift in Sources */,
 				049375CD24319BA00018B6F3 /* SceneWindow.swift in Sources */,
 				049375BB243198B20018B6F3 /* SceneDelegate.swift in Sources */,
+				04937646244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift in Sources */,
 				0493763A244E9C380018B6F3 /* NavigationBarAppearance.swift in Sources */,
+				0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */,
+				04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */,
+				0493764A244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift in Sources */,
+				04937651244E9FF20018B6F3 /* TutorialCoordinator.swift in Sources */,
+				04937645244E9D0F0018B6F3 /* TutorialIntroStartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +640,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
@@ -612,6 +661,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
@@ -631,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
@@ -652,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
