@@ -4,14 +4,14 @@
 import Photos
 import UIKit
 
-class PhotosViewController: UIViewController, UICollectionViewDelegate {
-    override func loadView() {
+public class PhotosViewController: UIViewController, UICollectionViewDelegate {
+    override public func loadView() {
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         view = collectionView
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         requester.requestAuthorization { status in
             print(status)
@@ -19,7 +19,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     // MARK: Collection View Delegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let asset = dataSource.asset(at: indexPath)
         imageManager.requestImage(for: asset, targetSize: Self.targetSize, contentMode: .aspectFill, options: nil) { image, info in
             dump(image)

@@ -1,10 +1,10 @@
-//  Created by Geoff Pado on 3/29/20.
+//  Created by Geoff Pado on 4/20/20.
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
+import Messages
 import PhotoData
-import UIKit
 
-class SceneViewController: UIViewController {
+class MessagesViewController: MSMessagesAppViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         embed(PhotosViewController())
