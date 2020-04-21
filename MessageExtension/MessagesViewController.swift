@@ -4,11 +4,32 @@
 import Messages
 import PhotoData
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, PhotosViewControllerDelegate {
     init() {
         super.init(nibName: nil, bundle: nil)
-        embed(PhotosViewController())
+        let photosViewController = PhotosViewController()
+        photosViewController.delegate = self
+        embed(photosViewController)
     }
+    
+    // MARK: Photos View Controller Delegate
+    
+    func didFetchImageData(_ imageData: Data) {
+        let temporaryDirectory = FileManager.default.temporaryDirectory
+        let temporaryFileURL = temporaryDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("jpg")
+        
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            do {
+                // we should do this asynchronously
+                try imageData.write(to: temporaryFileURL)
+                self?.activeConversation?.insertAttachment(temporaryFileURL, withAlternateFilename: nil, completionHandler: { error in
+                    dump(error)
+                })
+            } catch { dump(error) }
+        }
+    }
+
+    // MARK: Boilerplate
     
     @available(*, unavailable)
     required init(coder: NSCoder) {

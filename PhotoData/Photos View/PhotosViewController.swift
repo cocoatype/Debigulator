@@ -5,6 +5,8 @@ import Photos
 import UIKit
 
 public class PhotosViewController: UIViewController, UICollectionViewDelegate {
+    public weak var delegate: PhotosViewControllerDelegate?
+    
     override public func loadView() {
         collectionView.dataSource = dataSource
         collectionView.delegate = self
@@ -21,10 +23,11 @@ public class PhotosViewController: UIViewController, UICollectionViewDelegate {
     // MARK: Collection View Delegate
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let asset = dataSource.asset(at: indexPath)
-        imageManager.requestImage(for: asset, targetSize: Self.targetSize, contentMode: .aspectFill, options: nil) { image, info in
-            dump(image)
-            let imageData = image?.jpegData(compressionQuality: 0.8)
-            dump(imageData)
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .highQualityFormat
+        imageManager.requestImage(for: asset, targetSize: Self.targetSize, contentMode: .aspectFill, options: options) { [weak self] image, _ in
+            guard let imageData = image?.jpegData(compressionQuality: 0.8) else { return }
+            self?.delegate?.didFetchImageData(imageData)
         }
     }
     

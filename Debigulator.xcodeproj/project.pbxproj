@@ -29,6 +29,9 @@
 		04937627244E8D9D0018B6F3 /* LibraryPermissionsRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375D624319D860018B6F3 /* LibraryPermissionsRequester.swift */; };
 		04937628244E8D9D0018B6F3 /* LibraryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375D824319F030018B6F3 /* LibraryDataSource.swift */; };
 		0493762B244E8E3D0018B6F3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375CE24319C7C0018B6F3 /* UIViewControllerExtensions.swift */; };
+		0493762D244E8F840018B6F3 /* PhotosViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493762C244E8F840018B6F3 /* PhotosViewControllerDelegate.swift */; };
+		04937630244E91580018B6F3 /* PhotoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; };
+		04937631244E91580018B6F3 /* PhotoData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,20 @@
 			remoteInfo = MessageExtension;
 		};
 		04937619244E8D840018B6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04937613244E8D840018B6F3;
+			remoteInfo = PhotoData;
+		};
+		0493762E244E91530018B6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04937613244E8D840018B6F3;
+			remoteInfo = PhotoData;
+		};
+		04937632244E91580018B6F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
 			proxyType = 1;
@@ -67,6 +84,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0493761C244E8D840018B6F3 /* PhotoData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04937634244E91580018B6F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04937631244E91580018B6F3 /* PhotoData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +127,7 @@
 		04937614244E8D840018B6F3 /* PhotoData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotoData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04937616244E8D840018B6F3 /* PhotoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoData.h; sourceTree = "<group>"; };
 		04937617244E8D840018B6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0493762C244E8F840018B6F3 /* PhotosViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049375FF244E8CC20018B6F3 /* Messages.framework in Frameworks */,
+				04937630244E91580018B6F3 /* PhotoData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +198,7 @@
 			children = (
 				049375DE2431A45F0018B6F3 /* PhotosCollectionViewDataSource.swift */,
 				049375D024319C990018B6F3 /* PhotosViewController.swift */,
+				0493762C244E8F840018B6F3 /* PhotosViewControllerDelegate.swift */,
 				049375D324319CD60018B6F3 /* PhotosCollectionView.swift */,
 				049375DA2431A3FC0018B6F3 /* PhotosCollectionViewLayout.swift */,
 				049375DC2431A42C0018B6F3 /* PhotosCollectionViewCell.swift */,
@@ -257,10 +288,13 @@
 				049375FA244E8CC20018B6F3 /* Sources */,
 				049375FB244E8CC20018B6F3 /* Frameworks */,
 				049375FC244E8CC20018B6F3 /* Resources */,
+				04937634244E91580018B6F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0493762F244E91530018B6F3 /* PBXTargetDependency */,
+				04937633244E91580018B6F3 /* PBXTargetDependency */,
 			);
 			name = MessageExtension;
 			productName = MessageExtension;
@@ -385,6 +419,7 @@
 				04937626244E8D920018B6F3 /* PhotosCollectionViewCellImageView.swift in Sources */,
 				04937621244E8D920018B6F3 /* PhotosCollectionViewDataSource.swift in Sources */,
 				04937624244E8D920018B6F3 /* PhotosCollectionViewLayout.swift in Sources */,
+				0493762D244E8F840018B6F3 /* PhotosViewControllerDelegate.swift in Sources */,
 				04937622244E8D920018B6F3 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +436,16 @@
 			isa = PBXTargetDependency;
 			target = 04937613244E8D840018B6F3 /* PhotoData */;
 			targetProxy = 04937619244E8D840018B6F3 /* PBXContainerItemProxy */;
+		};
+		0493762F244E91530018B6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04937613244E8D840018B6F3 /* PhotoData */;
+			targetProxy = 0493762E244E91530018B6F3 /* PBXContainerItemProxy */;
+		};
+		04937633244E91580018B6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04937613244E8D840018B6F3 /* PhotoData */;
+			targetProxy = 04937632244E91580018B6F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
