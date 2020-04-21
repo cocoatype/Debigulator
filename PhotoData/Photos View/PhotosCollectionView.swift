@@ -6,7 +6,7 @@ import UIKit
 class PhotosCollectionView: UICollectionView {
     init() {
         super.init(frame: .zero, collectionViewLayout: PhotosCollectionViewLayout())
-        backgroundColor = .systemBlue
+        backgroundColor = .systemBackground
         
         register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
     }
