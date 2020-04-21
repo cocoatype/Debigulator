@@ -7,6 +7,10 @@ import UIKit
 class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     func asset(at indexPath: IndexPath) -> PHAsset { libraryDataSource.photo(at: indexPath.item) }
     
+    func reloadData() {
+        libraryDataSource.reloadData()
+    }
+
     // MARK: Collection View Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

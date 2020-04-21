@@ -4,8 +4,8 @@
 import Photos
 
 class LibraryDataSource: NSObject {
-    override init() {
-        super.init()
+    func reloadData() {
+        allPhotos = self.fetchAllPhotos()
     }
 
     // MARK: Photos

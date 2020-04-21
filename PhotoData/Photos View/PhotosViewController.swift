@@ -11,12 +11,14 @@ public class PhotosViewController: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         view = collectionView
+
+        navigationItem.title = Self.navigationTitle
     }
-    
+
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        requester.requestAuthorization { status in
-            print(status)
+        requester.requestAuthorization { [weak self] status in
+            self?.collectionView.reloadData()
         }
     }
     
@@ -32,6 +34,7 @@ public class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     // MARK: Boilerplate
+    private static let navigationTitle = NSLocalizedString("PhotosViewController.navigationTitle", comment: "Title when displayed in a navigation controller")
     private static let targetSize = CGSize(width: 320, height: 320)
     
     private let collectionView = PhotosCollectionView()

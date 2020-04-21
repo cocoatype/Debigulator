@@ -7,7 +7,7 @@ import UIKit
 class SceneViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
-        embed(PhotosViewController())
+        embed(NavigationController())
     }
     
     @available(*, unavailable)

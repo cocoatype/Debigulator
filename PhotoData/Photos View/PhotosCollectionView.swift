@@ -11,6 +11,11 @@ class PhotosCollectionView: UICollectionView {
         register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
     }
     
+    override func reloadData() {
+        (dataSource as? PhotosCollectionViewDataSource)?.reloadData()
+        super.reloadData()
+    }
+
     @available(*, unavailable)
     required init(coder: NSCoder) {
         fatalError("init(coder:) is not implemented")

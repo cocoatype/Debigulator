@@ -48,7 +48,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         ])
 
         isAccessibilityElement = true
-        backgroundColor = .systemRed
+        backgroundColor = .secondarySystemBackground
     }
 
     override func prepareForReuse() {
