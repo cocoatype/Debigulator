@@ -12,9 +12,9 @@ class PreviewView: UIView {
 
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            imageView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             imageView.widthAnchor.constraint(equalTo: widthAnchor),
-            imageView.heightAnchor.constraint(equalTo: heightAnchor)
+            imageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor)
         ])
     }
 

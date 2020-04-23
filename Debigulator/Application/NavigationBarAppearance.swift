@@ -16,7 +16,9 @@ class NavigationBarAppearance: UINavigationBarAppearance {
 
     private func setup() {
         configureWithOpaqueBackground()
-        backgroundColor = .systemGreen
+        backgroundColor = .appAccent
+        largeTitleTextAttributes = [.foregroundColor: UIColor.barTint]
+        titleTextAttributes = [.foregroundColor: UIColor.barTint]
     }
 
     @available(*, unavailable)

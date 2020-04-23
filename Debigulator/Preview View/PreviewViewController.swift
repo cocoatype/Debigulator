@@ -8,6 +8,7 @@ class PreviewViewController: UIViewController {
         image = UIImage(data: imageData)
 
         super.init(nibName: nil, bundle: nil)
+        navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
     }
 

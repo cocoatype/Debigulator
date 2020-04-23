@@ -48,6 +48,7 @@
 		04937657245136DE0018B6F3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937656245136DE0018B6F3 /* PreviewViewController.swift */; };
 		0493765924513B880018B6F3 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765824513B880018B6F3 /* PreviewView.swift */; };
 		0493765B24513BA40018B6F3 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765A24513BA40018B6F3 /* PreviewImageView.swift */; };
+		0493766024513E7C0018B6F3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765F24513E7C0018B6F3 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		04937656245136DE0018B6F3 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		0493765824513B880018B6F3 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		0493765A24513BA40018B6F3 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
+		0493765F24513E7C0018B6F3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		04937652245133210018B6F3 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				0493765F24513E7C0018B6F3 /* Colors.swift */,
 				04937653245133300018B6F3 /* Fonts.swift */,
 			);
 			path = Style;
@@ -494,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04937654245133300018B6F3 /* Fonts.swift in Sources */,
+				0493766024513E7C0018B6F3 /* Colors.swift in Sources */,
 				04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */,
 				0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */,
 				04937657245136DE0018B6F3 /* PreviewViewController.swift in Sources */,
@@ -708,7 +712,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -729,7 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

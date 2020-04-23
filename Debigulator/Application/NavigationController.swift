@@ -11,7 +11,9 @@ class NavigationController: UINavigationController, PhotosViewControllerDelegate
 
         setViewControllers([photosViewController], animated: false)
         navigationBar.standardAppearance = NavigationBarAppearance()
-        navigationBar.tintColor = UIColor.white
+        navigationBar.scrollEdgeAppearance = NavigationBarAppearance()
+        navigationBar.prefersLargeTitles = true
+        navigationBar.tintColor = .barTint
     }
 
     func didFetchImageData(_ imageData: Data) {
