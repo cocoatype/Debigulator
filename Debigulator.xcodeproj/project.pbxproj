@@ -216,21 +216,12 @@
 		049375B7243198B20018B6F3 /* Debigulator */ = {
 			isa = PBXGroup;
 			children = (
+				0493765E24513E510018B6F3 /* Application */,
+				0493765D24513E3E0018B6F3 /* Data */,
+				0493763D244E9D0F0018B6F3 /* Intro */,
 				04937655245136C50018B6F3 /* Preview View */,
 				04937652245133210018B6F3 /* Style */,
-				0493764E244E9D850018B6F3 /* Debigulator.entitlements */,
-				0493763D244E9D0F0018B6F3 /* Intro */,
-				049375B8243198B20018B6F3 /* AppDelegate.swift */,
-				049375BA243198B20018B6F3 /* SceneDelegate.swift */,
-				049375BC243198B20018B6F3 /* SceneViewController.swift */,
-				049375C1243198B20018B6F3 /* Assets.xcassets */,
-				049375C3243198B20018B6F3 /* LaunchScreen.storyboard */,
-				049375C6243198B20018B6F3 /* Info.plist */,
-				049375CC24319BA00018B6F3 /* SceneWindow.swift */,
-				04937635244E97750018B6F3 /* NavigationController.swift */,
-				04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */,
-				04937637244E98B50018B6F3 /* Localizable.strings */,
-				0493764C244E9D3D0018B6F3 /* Defaults.swift */,
+				0493765C24513E180018B6F3 /* Supporting Files */,
 			);
 			path = Debigulator;
 			sourceTree = "<group>";
@@ -320,6 +311,39 @@
 				0493765A24513BA40018B6F3 /* PreviewImageView.swift */,
 			);
 			path = "Preview View";
+			sourceTree = "<group>";
+		};
+		0493765C24513E180018B6F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				049375C1243198B20018B6F3 /* Assets.xcassets */,
+				0493764E244E9D850018B6F3 /* Debigulator.entitlements */,
+				049375C3243198B20018B6F3 /* LaunchScreen.storyboard */,
+				049375C6243198B20018B6F3 /* Info.plist */,
+				04937637244E98B50018B6F3 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0493765D24513E3E0018B6F3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0493764C244E9D3D0018B6F3 /* Defaults.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0493765E24513E510018B6F3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				049375B8243198B20018B6F3 /* AppDelegate.swift */,
+				049375BA243198B20018B6F3 /* SceneDelegate.swift */,
+				049375BC243198B20018B6F3 /* SceneViewController.swift */,
+				049375CC24319BA00018B6F3 /* SceneWindow.swift */,
+				04937635244E97750018B6F3 /* NavigationController.swift */,
+				04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
