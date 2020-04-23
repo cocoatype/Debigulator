@@ -8,12 +8,18 @@ class PreviewViewController: UIViewController {
         image = UIImage(data: imageData)
 
         super.init(nibName: nil, bundle: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
     }
 
     override func loadView() {
         previewView.image = image
         view = previewView
+    }
+
+    @objc private func shareImage() {
+        guard let image = image else { return }
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
 
     // MARK: Boilerplate
