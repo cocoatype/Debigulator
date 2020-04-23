@@ -4,7 +4,7 @@
 import PhotoData
 import UIKit
 
-class SceneViewController: UIViewController {
+class SceneViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     init() {
         super.init(nibName: nil, bundle: nil)
         embed(NavigationController())
@@ -19,13 +19,21 @@ class SceneViewController: UIViewController {
 
     private func showIntro() {
         guard presentedViewController == nil else { return }
-        present(TutorialIntroViewController(), animated: true, completion: nil)
+        let introViewController = TutorialIntroViewController()
+        introViewController.presentationController?.delegate = self
+        present(introViewController, animated: true, completion: nil)
     }
 
     @objc func requestPhotoPermissions(_ sender: Any) {
         dismiss(animated: true) { [weak self] in
             self?.photoViewController?.requestPhotoPermissions()
         }
+    }
+
+    // MARK: Presentation Controller Delegate
+
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        photoViewController?.requestPhotoPermissions()
     }
 
     // MARK: Boilerplate
