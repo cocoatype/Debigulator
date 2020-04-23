@@ -3,5 +3,5 @@
 
 "PhotosViewController.navigationTitle" = "Photos";
 "TutorialIntroView.headerText" = "Welcome to\nDebigulator";
-"TutorialIntroView.bodyText" = "Lorem ipsum dolor sit amet";
+"TutorialIntroView.bodyText" = "Debigulator is an app that makes sending images faster by shrinking them before transport.\n\nIn order for Debigulator to work its magic, we need access to your photo library. Tap the button below to grant access.";
 "TutorialIntroStartButton.title" = "Grant Access";

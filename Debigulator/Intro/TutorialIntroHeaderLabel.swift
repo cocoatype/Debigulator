@@ -8,7 +8,7 @@ class TutorialIntroHeaderLabel: UILabel {
         super.init(frame: .zero)
         self.adjustsFontSizeToFitWidth = true
         self.allowsDefaultTighteningForTruncation = true
-        self.font = .preferredFont(forTextStyle: .largeTitle)
+        self.font = .appFont(forTextStyle: .largeTitle)
         self.minimumScaleFactor = 0.9
         self.numberOfLines = 0
         self.textColor = .label

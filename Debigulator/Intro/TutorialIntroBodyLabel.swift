@@ -6,7 +6,7 @@ import UIKit
 class TutorialIntroBodyLabel: UILabel {
     init(text: String) {
         super.init(frame: .zero)
-        self.font = .preferredFont(forTextStyle: .callout)
+        self.font = .appFont(forTextStyle: .callout)
         self.numberOfLines = 0
         self.attributedText = correctlyPronounced(text)
         self.textColor = .label

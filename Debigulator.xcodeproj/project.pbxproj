@@ -44,6 +44,7 @@
 		0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */; };
 		0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493764C244E9D3D0018B6F3 /* Defaults.swift */; };
 		04937651244E9FF20018B6F3 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */; };
+		04937654245133300018B6F3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937653245133300018B6F3 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		0493764E244E9D850018B6F3 /* Debigulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Debigulator.entitlements; sourceTree = "<group>"; };
 		0493764F244E9D9B0018B6F3 /* MessageExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageExtension.entitlements; sourceTree = "<group>"; };
 		04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
+		04937653245133300018B6F3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		049375B7243198B20018B6F3 /* Debigulator */ = {
 			isa = PBXGroup;
 			children = (
+				04937652245133210018B6F3 /* Style */,
 				0493764E244E9D850018B6F3 /* Debigulator.entitlements */,
 				0493763D244E9D0F0018B6F3 /* Intro */,
 				049375B8243198B20018B6F3 /* AppDelegate.swift */,
@@ -292,6 +295,14 @@
 				04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		04937652245133210018B6F3 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				04937653245133300018B6F3 /* Fonts.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04937654245133300018B6F3 /* Fonts.swift in Sources */,
 				04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */,
 				0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */,
 				049375BD243198B20018B6F3 /* SceneViewController.swift in Sources */,

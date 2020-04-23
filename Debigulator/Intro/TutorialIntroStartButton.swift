@@ -8,7 +8,7 @@ class TutorialIntroStartButton: UIButton {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .systemGreen
-        titleLabel?.font = .preferredFont(forTextStyle: .headline)
+        titleLabel?.font = .appFont(forTextStyle: .headline)
         setTitleColor(.label, for: .normal)
         setTitle(Self.title, for: .normal)
         layer.cornerRadius = 8
