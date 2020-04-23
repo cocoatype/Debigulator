@@ -4,14 +4,23 @@
 import PhotoData
 import UIKit
 
-class NavigationController: UINavigationController {
+class NavigationController: UINavigationController, PhotosViewControllerDelegate {
     init() {
         super.init(navigationBarClass: nil, toolbarClass: nil)
-        setViewControllers([PhotosViewController()], animated: false)
+        photosViewController.delegate = self
+
+        setViewControllers([photosViewController], animated: false)
         navigationBar.standardAppearance = NavigationBarAppearance()
+        navigationBar.tintColor = UIColor.white
+    }
+
+    func didFetchImageData(_ imageData: Data) {
+        pushViewController(PreviewViewController(imageData: imageData), animated: true)
     }
 
     // MARK: Boilerplate
+
+    private let photosViewController = PhotosViewController()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)

@@ -38,10 +38,8 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
 
     // MARK: Boilerplate
 
-    private var photoViewController: PhotosViewController? {
-        let navigationController = children.first as? NavigationController
-        return navigationController?.topViewController as? PhotosViewController
-    }
+    private var sceneNavigationController: NavigationController? { children.first as? NavigationController }
+    private var photoViewController: PhotosViewController? { navigationController?.topViewController as? PhotosViewController }
 
     @available(*, unavailable)
     required init(coder: NSCoder) {

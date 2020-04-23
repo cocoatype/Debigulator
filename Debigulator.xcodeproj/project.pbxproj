@@ -45,6 +45,9 @@
 		0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493764C244E9D3D0018B6F3 /* Defaults.swift */; };
 		04937651244E9FF20018B6F3 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */; };
 		04937654245133300018B6F3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937653245133300018B6F3 /* Fonts.swift */; };
+		04937657245136DE0018B6F3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937656245136DE0018B6F3 /* PreviewViewController.swift */; };
+		0493765924513B880018B6F3 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765824513B880018B6F3 /* PreviewView.swift */; };
+		0493765B24513BA40018B6F3 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765A24513BA40018B6F3 /* PreviewImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +159,9 @@
 		0493764F244E9D9B0018B6F3 /* MessageExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageExtension.entitlements; sourceTree = "<group>"; };
 		04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
 		04937653245133300018B6F3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		04937656245136DE0018B6F3 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		0493765824513B880018B6F3 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		0493765A24513BA40018B6F3 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 		049375B7243198B20018B6F3 /* Debigulator */ = {
 			isa = PBXGroup;
 			children = (
+				04937655245136C50018B6F3 /* Preview View */,
 				04937652245133210018B6F3 /* Style */,
 				0493764E244E9D850018B6F3 /* Debigulator.entitlements */,
 				0493763D244E9D0F0018B6F3 /* Intro */,
@@ -303,6 +310,16 @@
 				04937653245133300018B6F3 /* Fonts.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		04937655245136C50018B6F3 /* Preview View */ = {
+			isa = PBXGroup;
+			children = (
+				04937656245136DE0018B6F3 /* PreviewViewController.swift */,
+				0493765824513B880018B6F3 /* PreviewView.swift */,
+				0493765A24513BA40018B6F3 /* PreviewImageView.swift */,
+			);
+			path = "Preview View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +472,8 @@
 				04937654245133300018B6F3 /* Fonts.swift in Sources */,
 				04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */,
 				0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */,
+				04937657245136DE0018B6F3 /* PreviewViewController.swift in Sources */,
+				0493765B24513BA40018B6F3 /* PreviewImageView.swift in Sources */,
 				049375BD243198B20018B6F3 /* SceneViewController.swift in Sources */,
 				049375B9243198B20018B6F3 /* AppDelegate.swift in Sources */,
 				04937636244E97750018B6F3 /* NavigationController.swift in Sources */,
@@ -462,6 +481,7 @@
 				049375CD24319BA00018B6F3 /* SceneWindow.swift in Sources */,
 				049375BB243198B20018B6F3 /* SceneDelegate.swift in Sources */,
 				04937646244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift in Sources */,
+				0493765924513B880018B6F3 /* PreviewView.swift in Sources */,
 				0493763A244E9C380018B6F3 /* NavigationBarAppearance.swift in Sources */,
 				0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */,
 				04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */,
