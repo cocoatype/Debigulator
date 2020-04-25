@@ -37,6 +37,8 @@
 		04761B102453E6AD00B6869A /* SettingsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761AEE2453E6AD00B6869A /* SettingsTableViewDataSource.swift */; };
 		04761B112453E6AD00B6869A /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761AF02453E6AD00B6869A /* AppEntry.swift */; };
 		04761B122453E6AD00B6869A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761AF12453E6AD00B6869A /* SettingsViewController.swift */; };
+		04761B172453EF9F00B6869A /* PhotoPermissionsRestrictedAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761B152453EF9E00B6869A /* PhotoPermissionsRestrictedAlertController.swift */; };
+		04761B182453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761B162453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift */; };
 		049375B9243198B20018B6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375B8243198B20018B6F3 /* AppDelegate.swift */; };
 		049375BB243198B20018B6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375BA243198B20018B6F3 /* SceneDelegate.swift */; };
 		049375BD243198B20018B6F3 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375BC243198B20018B6F3 /* SceneViewController.swift */; };
@@ -178,6 +180,8 @@
 		04761AEE2453E6AD00B6869A /* SettingsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewDataSource.swift; sourceTree = "<group>"; };
 		04761AF02453E6AD00B6869A /* AppEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		04761AF12453E6AD00B6869A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04761B152453EF9E00B6869A /* PhotoPermissionsRestrictedAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPermissionsRestrictedAlertController.swift; sourceTree = "<group>"; };
+		04761B162453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPermissionsDeniedAlertController.swift; sourceTree = "<group>"; };
 		049375B5243198B20018B6F3 /* Debigulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debigulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049375B8243198B20018B6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049375BA243198B20018B6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -498,6 +502,8 @@
 		0493765E24513E510018B6F3 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04761B162453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift */,
+				04761B152453EF9E00B6869A /* PhotoPermissionsRestrictedAlertController.swift */,
 				049375B8243198B20018B6F3 /* AppDelegate.swift */,
 				049375BA243198B20018B6F3 /* SceneDelegate.swift */,
 				049375BC243198B20018B6F3 /* SceneViewController.swift */,
@@ -678,6 +684,7 @@
 				04937647244E9D0F0018B6F3 /* TutorialIntroViewController.swift in Sources */,
 				049375CD24319BA00018B6F3 /* SceneWindow.swift in Sources */,
 				04761B122453E6AD00B6869A /* SettingsViewController.swift in Sources */,
+				04761B182453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift in Sources */,
 				049375BB243198B20018B6F3 /* SceneDelegate.swift in Sources */,
 				04761AFE2453E6AD00B6869A /* AcknowledgementsItem.swift in Sources */,
 				04761AF82453E6AD00B6869A /* SocialSection.swift in Sources */,
@@ -688,6 +695,7 @@
 				04761AF72453E6AD00B6869A /* SettingsContentSection.swift in Sources */,
 				04761B112453E6AD00B6869A /* AppEntry.swift in Sources */,
 				0493765924513B880018B6F3 /* PreviewView.swift in Sources */,
+				04761B172453EF9F00B6869A /* PhotoPermissionsRestrictedAlertController.swift in Sources */,
 				0493763A244E9C380018B6F3 /* NavigationBarAppearance.swift in Sources */,
 				0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */,
 				04761AF32453E6AD00B6869A /* StandardContentItem.swift in Sources */,

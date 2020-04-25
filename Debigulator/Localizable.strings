@@ -1,6 +1,15 @@
 //  Created by Geoff Pado on 4/20/20.
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
+"PhotoPermissionsDeniedAlertController.alertTitle" = "No Access to Your Photos";
+"PhotoPermissionsDeniedAlertController.alertMessage" = "Debigulator needs permission to edit your photos. Open Settings to grant access.";
+"PhotoPermissionsDeniedAlertController.actionButtonTitle" = "Open Settings";
+"PhotoPermissionsDeniedAlertController.cancelButtonTitle" = "Dismiss";
+
+"PhotoPermissionsRestrictedAlertController.alertTitle" = "Photos Access Restricted";
+"PhotoPermissionsRestrictedAlertController.alertMessage" = "Debigulator needs permission to edit your photos. However, restrictions on your device prevent that access. Ask whoever controls permissions for you to grant access to the photo library to Debigulator.";
+"PhotoPermissionsRestrictedAlertController.dismissButtonTitle" = "Dismiss";
+
 "PhotosViewController.navigationTitle" = "Photos";
 
 "SettingsContentProvider.Item.contact" = "Contact the Developer";

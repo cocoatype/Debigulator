@@ -24,9 +24,20 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         present(introViewController, animated: false, completion: nil)
     }
 
-    @objc func requestPhotoPermissions(_ sender: Any) {
-        dismiss(animated: true) { [weak self] in
-            self?.photoViewController?.requestPhotoPermissions()
+    @objc func requestPhotoPermissions() {
+        photoViewController?.requestPhotoPermissions() { [weak self] status in
+            switch status {
+            case .authorized:
+                self?.dismiss(animated: true)
+            case .restricted:
+                self?.presentedViewController?.present(PhotoPermissionsRestrictedAlertFactory.alert, animated: true)
+            case .denied:
+                self?.presentedViewController?.present(PhotoPermissionsDeniedAlertFactory.alert, animated: true)
+            case .notDetermined:
+                fallthrough
+            @unknown default:
+                break
+            }
         }
     }
 
@@ -43,8 +54,8 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
 
     // MARK: Presentation Controller Delegate
 
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        photoViewController?.requestPhotoPermissions()
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        requestPhotoPermissions()
     }
 
     // MARK: Status Bar
@@ -54,7 +65,7 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
     // MARK: Boilerplate
 
     private var sceneNavigationController: NavigationController? { children.first as? NavigationController }
-    private var photoViewController: PhotosViewController? { navigationController?.topViewController as? PhotosViewController }
+    private var photoViewController: PhotosViewController? { sceneNavigationController?.topViewController as? MainAppPhotosViewController }
 
     @available(*, unavailable)
     required init(coder: NSCoder) {

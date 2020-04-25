@@ -15,7 +15,7 @@ class TutorialIntroStartButton: UIButton {
         setTitle(Self.title, for: .normal)
         layer.cornerRadius = 8
 
-        addTarget(nil, action: #selector(SceneViewController.requestPhotoPermissions(_:)), for: .primaryActionTriggered)
+        addTarget(nil, action: #selector(SceneViewController.requestPhotoPermissions), for: .primaryActionTriggered)
     }
 
     // MARK: Boilerplate

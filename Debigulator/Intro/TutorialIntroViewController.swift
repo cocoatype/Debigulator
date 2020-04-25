@@ -6,6 +6,7 @@ import UIKit
 class TutorialIntroViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
+        isModalInPresentation = true
         modalPresentationStyle = .formSheet
         preferredContentSize = CGSize(width: 425, height: 550)
     }
