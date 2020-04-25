@@ -21,7 +21,7 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         guard presentedViewController == nil else { return }
         let introViewController = TutorialIntroViewController()
         introViewController.presentationController?.delegate = self
-        present(introViewController, animated: true, completion: nil)
+        present(introViewController, animated: false, completion: nil)
     }
 
     @objc func requestPhotoPermissions(_ sender: Any) {

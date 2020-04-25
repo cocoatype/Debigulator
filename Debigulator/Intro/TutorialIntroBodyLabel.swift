@@ -6,11 +6,12 @@ import UIKit
 class TutorialIntroBodyLabel: UILabel {
     init(text: String) {
         super.init(frame: .zero)
-        self.font = .appFont(forTextStyle: .callout)
-        self.numberOfLines = 0
-        self.attributedText = correctlyPronounced(text)
-        self.textColor = .label
-        self.translatesAutoresizingMaskIntoConstraints = false
+        adjustsFontForContentSizeCategory = true
+        font = .appFont(forTextStyle: .callout)
+        numberOfLines = 0
+        textColor = .label
+        translatesAutoresizingMaskIntoConstraints = false
+        self.text = text
     }
 
     private func correctlyPronounced(_ string: String) -> NSAttributedString {

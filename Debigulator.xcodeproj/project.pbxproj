@@ -39,7 +39,6 @@
 		04937646244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */; };
 		04937647244E9D0F0018B6F3 /* TutorialIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */; };
 		04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */; };
-		04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */; };
 		0493764A244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */; };
 		0493764B244E9D0F0018B6F3 /* TutorialIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */; };
 		0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493764C244E9D3D0018B6F3 /* Defaults.swift */; };
@@ -152,7 +151,6 @@
 		0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroBodyLabel.swift; sourceTree = "<group>"; };
 		04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroViewController.swift; sourceTree = "<group>"; };
 		04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroHeaderLabel.swift; sourceTree = "<group>"; };
-		04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroDismissButton.swift; sourceTree = "<group>"; };
 		04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroButtonsStackView.swift; sourceTree = "<group>"; };
 		04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialIntroView.swift; sourceTree = "<group>"; };
 		0493764C244E9D3D0018B6F3 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 				0493763F244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift */,
 				04937640244E9D0F0018B6F3 /* TutorialIntroViewController.swift */,
 				04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */,
-				04937642244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift */,
 				04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */,
 				04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */,
 				04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */,
@@ -498,7 +495,6 @@
 			files = (
 				04937654245133300018B6F3 /* Fonts.swift in Sources */,
 				0493766024513E7C0018B6F3 /* Colors.swift in Sources */,
-				04937649244E9D0F0018B6F3 /* TutorialIntroDismissButton.swift in Sources */,
 				0493764D244E9D3D0018B6F3 /* Defaults.swift in Sources */,
 				04937657245136DE0018B6F3 /* PreviewViewController.swift in Sources */,
 				0493765B24513BA40018B6F3 /* PreviewImageView.swift in Sources */,

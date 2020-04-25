@@ -28,6 +28,10 @@ public extension UIFont {
         return regularFont(for: .subheadline)
     }
 
+    class var tutorialButtonFont: UIFont {
+        return boldFont(for: .headline)
+    }
+
     // MARK: Boilerplate
 
     private static func blackFont(for textStyle: UIFont.TextStyle) -> UIFont {

@@ -3,5 +3,5 @@
 
 "PhotosViewController.navigationTitle" = "Photos";
 "TutorialIntroView.headerText" = "Welcome to\nDebigulator";
-"TutorialIntroView.bodyText" = "Debigulator is an app that makes sending images faster by shrinking them before transport.\n\nIn order for Debigulator to work its magic, we need access to your photo library. Tap the button below to grant access.";
-"TutorialIntroStartButton.title" = "Grant Access";
+"TutorialIntroView.bodyText" = "Congratulations! You are now the owner of a brand-new Debigulator Mark I! The Debigulator uses advanced quantum minification science to shrink images prior to transport, making transportation much quicker.\n\nTo begin using your new Debigulator, simply engage the Photo Intake Processor using the button below.";
+"TutorialIntroStartButton.title" = "Enable Photo Intake";
