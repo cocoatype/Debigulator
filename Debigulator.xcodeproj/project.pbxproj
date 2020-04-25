@@ -63,7 +63,6 @@
 		0493762B244E8E3D0018B6F3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049375CE24319C7C0018B6F3 /* UIViewControllerExtensions.swift */; };
 		0493762D244E8F840018B6F3 /* PhotosViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493762C244E8F840018B6F3 /* PhotosViewControllerDelegate.swift */; };
 		04937630244E91580018B6F3 /* PhotoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; };
-		04937631244E91580018B6F3 /* PhotoData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04937636244E97750018B6F3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937635244E97750018B6F3 /* NavigationController.swift */; };
 		04937638244E98B50018B6F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04937637244E98B50018B6F3 /* Localizable.strings */; };
 		0493763A244E9C380018B6F3 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937639244E9C380018B6F3 /* NavigationBarAppearance.swift */; };
@@ -132,17 +131,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0493761C244E8D840018B6F3 /* PhotoData.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04937634244E91580018B6F3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				04937631244E91580018B6F3 /* PhotoData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,7 +544,6 @@
 				049375FA244E8CC20018B6F3 /* Sources */,
 				049375FB244E8CC20018B6F3 /* Frameworks */,
 				049375FC244E8CC20018B6F3 /* Resources */,
-				04937634244E91580018B6F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -905,6 +892,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -926,6 +914,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -947,11 +936,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.MessageExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -969,11 +959,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.MessageExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -999,8 +990,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1028,8 +1020,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
