@@ -4,15 +4,17 @@
 import Photos
 import UIKit
 
-public class PhotosViewController: UIViewController, UICollectionViewDelegate {
+open class PhotosViewController: UIViewController, UICollectionViewDelegate {
     public weak var delegate: PhotosViewControllerDelegate?
+
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override public func loadView() {
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         view = collectionView
-
-        navigationItem.title = Self.navigationTitle
     }
 
     public func requestPhotoPermissions() {
@@ -33,11 +35,16 @@ public class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     // MARK: Boilerplate
-    private static let navigationTitle = NSLocalizedString("PhotosViewController.navigationTitle", comment: "Title when displayed in a navigation controller")
+
     private static let targetSize = CGSize(width: 320, height: 320)
     
     private let collectionView = PhotosCollectionView()
     private let dataSource = PhotosCollectionViewDataSource()
     private let imageManager = PHImageManager()
     private let requester = LibraryPermissionsRequester()
+
+    @available(*, unavailable)
+    public required init(coder: NSCoder) {
+        fatalError("init(coder:) is not implemented")
+    }
 }

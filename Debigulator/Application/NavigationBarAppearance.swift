@@ -19,6 +19,10 @@ class NavigationBarAppearance: UINavigationBarAppearance {
         backgroundColor = .appAccent
         largeTitleTextAttributes = [.foregroundColor: UIColor.barTint]
         titleTextAttributes = [.foregroundColor: UIColor.barTint]
+
+        let buttonAppearance = UIBarButtonItemAppearance()
+        buttonAppearance.normal.titleTextAttributes[.foregroundColor] = UIColor.barTint
+        doneButtonAppearance = buttonAppearance
     }
 
     @available(*, unavailable)

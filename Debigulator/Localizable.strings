@@ -2,6 +2,20 @@
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
 "PhotosViewController.navigationTitle" = "Photos";
+
+"SettingsContentProvider.Item.contact" = "Contact the Developer";
+"SettingsContentProvider.Item.privacy" = "Privacy Policy";
+"SettingsContentProvider.Item.releaseNotes" = "What's New?";
+"SettingsContentProvider.Item.twitch" = "Twitch";
+"SettingsContentProvider.Item.twitch.subtitle" = "cocoatype";
+"SettingsContentProvider.Item.twitter" = "Twitter";
+"SettingsContentProvider.Item.twitter.subtitle" = "@cocoatype";
+
+"SettingsContentProvider.Section.otherApps.header" = "Other Apps by Cocoatype";
+"SettingsContentProvider.Section.social.header" = "Social Media";
+
+"SettingsViewController.navigationTitle" = "Debigulator Help";
+
 "TutorialIntroView.headerText" = "Welcome to\nDebigulator";
 "TutorialIntroView.bodyText" = "Congratulations! You are now the owner of a brand-new Debigulator Mark I! The Debigulator uses advanced quantum minification science to shrink images prior to transport, making transportation much quicker.\n\nTo begin using your new Debigulator, simply engage the Photo Intake Processor using the button below.";
 "TutorialIntroStartButton.title" = "Enable Photo Intake";

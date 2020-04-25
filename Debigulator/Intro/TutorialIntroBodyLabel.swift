@@ -14,13 +14,6 @@ class TutorialIntroBodyLabel: UILabel {
         self.text = text
     }
 
-    private func correctlyPronounced(_ string: String) -> NSAttributedString {
-        let range = (string as NSString).range(of: "Kineo")
-        let attributedString = NSMutableAttributedString(string: string)
-        attributedString.addAttribute(.accessibilitySpeechIPANotation, value: "ˈkɪ.ni.o͡ʊ", range: range)
-        return attributedString
-    }
-
     // MARK: Boilerplate
 
     @available(*, unavailable)

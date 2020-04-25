@@ -22,7 +22,7 @@ class NavigationController: UINavigationController, PhotosViewControllerDelegate
 
     // MARK: Boilerplate
 
-    private let photosViewController = PhotosViewController()
+    private let photosViewController = MainAppPhotosViewController()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)

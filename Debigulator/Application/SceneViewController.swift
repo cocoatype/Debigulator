@@ -30,6 +30,17 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         }
     }
 
+    @objc func showHelp() {
+        guard presentedViewController == nil else { return }
+        let settingsNavigationController = SettingsNavigationController()
+        present(settingsNavigationController, animated: true, completion: nil)
+    }
+
+    @objc func dismissHelp() {
+        guard (presentedViewController is SettingsNavigationController) else { return }
+        dismiss(animated: true)
+    }
+
     // MARK: Presentation Controller Delegate
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
@@ -49,4 +60,15 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
     required init(coder: NSCoder) {
         fatalError("init(coder:) is not implemented")
     }
+}
+
+class MainAppPhotosViewController: PhotosViewController {
+    override init() {
+        super.init()
+
+        navigationItem.title = Self.navigationTitle
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "questionmark.circle"), style: .plain, target: nil, action: #selector(SceneViewController.showHelp))
+    }
+
+    private static let navigationTitle = NSLocalizedString("PhotosViewController.navigationTitle", comment: "Title when displayed in a navigation controller")
 }
