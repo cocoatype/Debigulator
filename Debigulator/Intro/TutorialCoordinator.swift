@@ -2,10 +2,15 @@
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
 import Foundation
+import Photos
 
 class TutorialCoordinator: NSObject {
     static var shouldStartTutorial: Bool {
-        return forceShowTutorial || Defaults.seenIntro == false
+        return photosNotGranted || forceShowTutorial || Defaults.seenIntro == false
+    }
+
+    static var photosNotGranted: Bool {
+        return PHPhotoLibrary.authorizationStatus() != .authorized
     }
 
     // MARK: Override
