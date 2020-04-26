@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		04761AF32453E6AD00B6869A /* StandardContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACB2453E6AD00B6869A /* StandardContentItem.swift */; };
 		04761AF42453E6AD00B6869A /* SettingsContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */; };
 		04761AF52453E6AD00B6869A /* OtherAppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACE2453E6AD00B6869A /* OtherAppItem.swift */; };
@@ -138,6 +139,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		04761ACB2453E6AD00B6869A /* StandardContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardContentItem.swift; sourceTree = "<group>"; };
 		04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContentItem.swift; sourceTree = "<group>"; };
 		04761ACE2453E6AD00B6869A /* OtherAppItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherAppItem.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				04937641244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift */,
 				04937643244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift */,
 				04937644244E9D0F0018B6F3 /* TutorialIntroView.swift */,
+				0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */,
 				04937650244E9FF20018B6F3 /* TutorialCoordinator.swift */,
 			);
 			path = Intro;
@@ -690,6 +693,7 @@
 				04761B012453E6AD00B6869A /* SettingsSection.swift in Sources */,
 				04761B0C2453E6AD00B6869A /* SettingsTableViewCellImageView.swift in Sources */,
 				04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */,
+				0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */,
 				04761AF62453E6AD00B6869A /* OtherAppsSection.swift in Sources */,
 				0493764A244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift in Sources */,
 				04761B092453E6AD00B6869A /* PrivacyViewController.swift in Sources */,
@@ -885,6 +889,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -907,6 +912,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -928,6 +934,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -951,6 +958,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -973,7 +981,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -987,6 +995,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1003,7 +1012,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1017,6 +1026,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
