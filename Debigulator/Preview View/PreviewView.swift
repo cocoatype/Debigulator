@@ -6,7 +6,7 @@ import UIKit
 class PreviewView: UIView {
     init() {
         super.init(frame: .zero)
-        backgroundColor = .systemBackground
+        backgroundColor = .black
 
         addSubview(imageView)
 
