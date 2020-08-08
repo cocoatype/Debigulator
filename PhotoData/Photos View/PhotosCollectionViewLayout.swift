@@ -5,7 +5,7 @@ import UIKit
 
 class PhotosCollectionViewLayout: UICollectionViewCompositionalLayout {
     init(void: Void = ()) {
-        super.init(section: PhotosCollectionViewLayoutSection())
+        super.init { PhotosCollectionViewLayoutSection(environment: $1) }
     }
     
     @available(*, unavailable)
@@ -15,27 +15,28 @@ class PhotosCollectionViewLayout: UICollectionViewCompositionalLayout {
 }
 
 class PhotosCollectionViewLayoutSection: NSCollectionLayoutSection {
-    convenience init(void: Void = ()) {
-        self.init(group: PhotosCollectionViewLayoutGroup.standard())
+    convenience init(environment: NSCollectionLayoutEnvironment) {
+        self.init(group: PhotosCollectionViewLayoutGroup.standard(environment: environment))
     }
 }
 
 class PhotosCollectionViewLayoutGroup: NSCollectionLayoutGroup {
-    class func standard() -> Self {
-        return Self.horizontal(layoutSize: groupSize, subitems: [PhotosCollectionViewLayoutItem()])
-    }
-    
-    private static let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
-}
+    class func standard(environment: NSCollectionLayoutEnvironment) -> Self {
+        let environmentWidth = environment.container.effectiveContentSize.width
+        let itemsPerGroup = floor(environmentWidth / Self.targetWidth)
+        let actualItemWidth = environmentWidth / itemsPerGroup
 
-class PhotosCollectionViewLayoutSize: NSCollectionLayoutSize {
-    convenience init(void: Void = ()) {
-        self.init(widthDimension: .absolute(80), heightDimension: .absolute(80))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(actualItemWidth))
+
+        return Self.horizontal(layoutSize: groupSize, subitems: [PhotosCollectionViewLayoutItem(itemWidth: actualItemWidth)])
     }
+
+    private static let targetWidth = CGFloat(80)
 }
 
 class PhotosCollectionViewLayoutItem: NSCollectionLayoutItem {
-    convenience init(void: Void = ()) {
-        self.init(layoutSize: PhotosCollectionViewLayoutSize())
+    convenience init(itemWidth: CGFloat) {
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .absolute(itemWidth), heightDimension: .absolute(itemWidth))
+        self.init(layoutSize: layoutSize)
     }
 }
