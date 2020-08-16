@@ -4,12 +4,6 @@
 import Photos
 import UIKit
 
-private extension CGSize {
-    static func * (lhs: CGSize, rhs: CGFloat) -> CGSize {
-        return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
-    }
-}
-
 class PhotosCollectionViewCell: UICollectionViewCell {
     static let identifier = "PhotosCollectionViewCell.identifier"
 

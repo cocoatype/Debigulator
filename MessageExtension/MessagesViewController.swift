@@ -14,7 +14,7 @@ class MessagesViewController: MSMessagesAppViewController, PhotosViewControllerD
     
     // MARK: Photos View Controller Delegate
     
-    func didFetchImageData(_ imageData: Data) {
+    func didFetchImageData(_ imageData: Data, highQualityImage: UIImage) {
         let temporaryDirectory = FileManager.default.temporaryDirectory
         let temporaryFileURL = temporaryDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("jpg")
         

@@ -58,6 +58,12 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         requestPhotoPermissions()
     }
 
+    // MARK: Status Bar
+
+    override var childForStatusBarHidden: UIViewController? {
+        return sceneNavigationController?.topViewController
+    }
+
     // MARK: Boilerplate
 
     private var sceneNavigationController: NavigationController? { children.first as? NavigationController }

@@ -4,28 +4,60 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
-    init(imageData: Data) {
-        image = UIImage(data: imageData)
-
+    init(imageData: Data, highQualityImage: UIImage) {
+        self.lowQualityImage = UIImage(data: imageData)
+        self.highQualityImage = highQualityImage
         super.init(nibName: nil, bundle: nil)
+
+        edgesForExtendedLayout = .top
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
     }
 
     override func loadView() {
-        previewView.image = image
+        previewView.image = lowQualityImage
         view = previewView
     }
 
     @objc private func shareImage() {
-        guard let image = image else { return }
+        guard let image = lowQualityImage else { return }
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
 
+    // MARK: Actions
+
+    @objc func toggleFocus() {
+        let duration = TimeInterval(UINavigationController.hideShowBarDuration)
+        UIView.animate(withDuration: duration) { [unowned self] in
+            self.isFocusing.toggle()
+        }
+    }
+
+    private var isFocusing = false {
+        didSet {
+            previewView.isFocusing = isFocusing
+            navigationController?.setNavigationBarHidden(isFocusing, animated: true)
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+
+    @objc func showLowQuality() {
+        previewView.image = lowQualityImage
+    }
+
+    @objc func showHighQuality() {
+        previewView.image = highQualityImage
+    }
+
+    // MARK: Status Bar
+
+    override var prefersStatusBarHidden: Bool { isFocusing }
+
     // MARK: Boilerplate
 
-    private let image: UIImage?
+    private let lowQualityImage: UIImage?
+    private let highQualityImage: UIImage?
     private let previewView = PreviewView()
 
     @available(*, unavailable)

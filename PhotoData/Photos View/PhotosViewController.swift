@@ -29,16 +29,19 @@ open class PhotosViewController: UIViewController, UICollectionViewDelegate {
         let asset = dataSource.asset(at: indexPath)
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
-        imageManager.requestImage(for: asset, targetSize: Self.targetSize, contentMode: .aspectFill, options: options) { [weak self] image, _ in
-            guard let imageData = image?.jpegData(compressionQuality: 0.8) else { return }
-            self?.delegate?.didFetchImageData(imageData)
+        let targetSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
+        imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: options) { [weak self] image, _ in
+            guard let image = image else {
+                fatalError("Unable to fetch image from photo library")
+            }
+
+            let imageData = PhotoCompressor.compressedData(from: image)
+            self?.delegate?.didFetchImageData(imageData, highQualityImage: image)
         }
     }
     
     // MARK: Boilerplate
 
-    private static let targetSize = CGSize(width: 320, height: 320)
-    
     private let collectionView = PhotosCollectionView()
     private let dataSource = PhotosCollectionViewDataSource()
     private let imageManager = PHImageManager()

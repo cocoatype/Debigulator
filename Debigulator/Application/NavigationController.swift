@@ -16,8 +16,8 @@ class NavigationController: UINavigationController, PhotosViewControllerDelegate
         navigationBar.tintColor = .barTint
     }
 
-    func didFetchImageData(_ imageData: Data) {
-        pushViewController(PreviewViewController(imageData: imageData), animated: true)
+    func didFetchImageData(_ imageData: Data, highQualityImage: UIImage) {
+        pushViewController(PreviewViewController(imageData: imageData, highQualityImage: highQualityImage), animated: true)
     }
 
     // MARK: Boilerplate
