@@ -17,21 +17,26 @@ class PhotosCollectionViewLayout: UICollectionViewCompositionalLayout {
 class PhotosCollectionViewLayoutSection: NSCollectionLayoutSection {
     convenience init(environment: NSCollectionLayoutEnvironment) {
         self.init(group: PhotosCollectionViewLayoutGroup.standard(environment: environment))
+        interGroupSpacing = PhotosCollectionViewLayoutGroup.spacing
     }
 }
 
 class PhotosCollectionViewLayoutGroup: NSCollectionLayoutGroup {
     class func standard(environment: NSCollectionLayoutEnvironment) -> Self {
         let environmentWidth = environment.container.effectiveContentSize.width
-        let itemsPerGroup = floor(environmentWidth / Self.targetWidth)
-        let actualItemWidth = environmentWidth / itemsPerGroup
+        let itemsPerGroup = CGFloat(3) //floor(environmentWidth / Self.targetWidth)
+        let spaceWidth = (itemsPerGroup - 1) * Self.spacing
+        let actualItemWidth = (environmentWidth - spaceWidth) / itemsPerGroup
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(actualItemWidth))
 
-        return Self.horizontal(layoutSize: groupSize, subitems: [PhotosCollectionViewLayoutItem(itemWidth: actualItemWidth)])
+        let group = Self.horizontal(layoutSize: groupSize, subitems: [PhotosCollectionViewLayoutItem(itemWidth: actualItemWidth)])
+        group.interItemSpacing = .fixed(Self.spacing)
+        return group
     }
 
-    private static let targetWidth = CGFloat(80)
+    private static let targetWidth = CGFloat(100)
+    static let spacing = CGFloat(2)
 }
 
 class PhotosCollectionViewLayoutItem: NSCollectionLayoutItem {

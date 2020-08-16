@@ -6,6 +6,6 @@ import UIKit
 extension UIColor {
     static let appAccent = UIColor.systemGreen
     static let appBackground = UIColor.systemBackground
-    static let barTint = UIColor.black
+    static let barTint = UIColor.systemGreen
     static let controlTint = UIColor.systemGreen
 }

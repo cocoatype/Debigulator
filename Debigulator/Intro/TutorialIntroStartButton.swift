@@ -11,7 +11,7 @@ class TutorialIntroStartButton: UIButton {
         titleLabel?.adjustsFontSizeToFitWidth = true
         titleLabel?.font = .tutorialButtonFont
         titleLabel?.textAlignment = .center
-        setTitleColor(.barTint, for: .normal)
+        setTitleColor(.black, for: .normal)
         setTitle(Self.title, for: .normal)
         layer.cornerRadius = 8
 

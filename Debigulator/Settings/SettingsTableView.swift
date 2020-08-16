@@ -6,7 +6,6 @@ import UIKit
 class SettingsTableView: UITableView {
     init() {
         super.init(frame: .zero, style: .insetGrouped)
-        backgroundColor = .appBackground
 
         register(SettingsStandardTableViewCell.self, forCellReuseIdentifier: SettingsStandardTableViewCell.identifier)
     }

@@ -15,10 +15,8 @@ class NavigationBarAppearance: UINavigationBarAppearance {
     }
 
     private func setup() {
-        configureWithOpaqueBackground()
-        backgroundColor = .appAccent
-        largeTitleTextAttributes = [.foregroundColor: UIColor.barTint]
-        titleTextAttributes = [.foregroundColor: UIColor.barTint]
+        configureWithTransparentBackground()
+        backgroundEffect = UIBlurEffect(style: .systemThickMaterialLight)
 
         let buttonAppearance = UIBarButtonItemAppearance()
         buttonAppearance.normal.titleTextAttributes[.foregroundColor] = UIColor.barTint

@@ -58,10 +58,6 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         requestPhotoPermissions()
     }
 
-    // MARK: Status Bar
-
-    override var preferredStatusBarStyle: UIStatusBarStyle { .darkContent }
-
     // MARK: Boilerplate
 
     private var sceneNavigationController: NavigationController? { children.first as? NavigationController }

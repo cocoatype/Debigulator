@@ -13,14 +13,9 @@ class SettingsStandardTableViewCell: UITableViewCell, SettingsContentTableViewCe
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: SettingsStandardTableViewCell.identifier)
         accessoryType = .disclosureIndicator
-//        tintColor = .settingsRowTint
 
         textLabel?.font = .appFont(forTextStyle: .body)
         detailTextLabel?.font = .appFont(forTextStyle: .caption1)
-
-//        let selectedBackgroundView = UIView()
-//        selectedBackgroundView.backgroundColor = .sidebarButtonHighlight
-//        self.selectedBackgroundView = selectedBackgroundView
     }
 
     var item: SettingsContentItem? {
