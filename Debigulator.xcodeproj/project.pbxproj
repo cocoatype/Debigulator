@@ -16,6 +16,8 @@
 		0424AC8424EA313400DC0207 /* PreviewCompressionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8324EA313400DC0207 /* PreviewCompressionLabel.swift */; };
 		0424AC8624EA315200DC0207 /* PreviewSaveActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8524EA315200DC0207 /* PreviewSaveActionButton.swift */; };
 		0424AC8824EA316400DC0207 /* PreviewShareActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */; };
+		0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8924EA322E00DC0207 /* LibraryWriter.swift */; };
+		0424AC8C24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */; };
 		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		04761AF32453E6AD00B6869A /* StandardContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACB2453E6AD00B6869A /* StandardContentItem.swift */; };
 		04761AF42453E6AD00B6869A /* SettingsContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */; };
@@ -157,6 +159,8 @@
 		0424AC8324EA313400DC0207 /* PreviewCompressionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCompressionLabel.swift; sourceTree = "<group>"; };
 		0424AC8524EA315200DC0207 /* PreviewSaveActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSaveActionButton.swift; sourceTree = "<group>"; };
 		0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewShareActionButton.swift; sourceTree = "<group>"; };
+		0424AC8924EA322E00DC0207 /* LibraryWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWriter.swift; sourceTree = "<group>"; };
+		0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSaveAlertFactory.swift; sourceTree = "<group>"; };
 		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		04761ACB2453E6AD00B6869A /* StandardContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardContentItem.swift; sourceTree = "<group>"; };
 		04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContentItem.swift; sourceTree = "<group>"; };
@@ -419,6 +423,7 @@
 			children = (
 				049375D624319D860018B6F3 /* LibraryPermissionsRequester.swift */,
 				049375D824319F030018B6F3 /* LibraryDataSource.swift */,
+				0424AC8924EA322E00DC0207 /* LibraryWriter.swift */,
 			);
 			path = "Library Management";
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				0424AC7F24EA206400DC0207 /* PreviewActionsView.swift */,
 				0424AC8324EA313400DC0207 /* PreviewCompressionLabel.swift */,
 				0424AC8524EA315200DC0207 /* PreviewSaveActionButton.swift */,
+				0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */,
 				0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */,
 			);
 			path = "Preview View";
@@ -679,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04937654245133300018B6F3 /* Fonts.swift in Sources */,
+				0424AC8C24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift in Sources */,
 				04761B042453E6AD00B6869A /* SettingsHeaderFooterView.swift in Sources */,
 				04761AFD2453E6AD00B6869A /* PrivacyItem.swift in Sources */,
 				04761AFA2453E6AD00B6869A /* TwitchItem.swift in Sources */,
@@ -760,6 +767,7 @@
 				04937627244E8D9D0018B6F3 /* LibraryPermissionsRequester.swift in Sources */,
 				0493762B244E8E3D0018B6F3 /* UIViewControllerExtensions.swift in Sources */,
 				04937626244E8D920018B6F3 /* PhotosCollectionViewCellImageView.swift in Sources */,
+				0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */,
 				04937621244E8D920018B6F3 /* PhotosCollectionViewDataSource.swift in Sources */,
 				04937624244E8D920018B6F3 /* PhotosCollectionViewLayout.swift in Sources */,
 				0493762D244E8F840018B6F3 /* PhotosViewControllerDelegate.swift in Sources */,

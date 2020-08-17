@@ -1,12 +1,20 @@
 //  Created by Geoff Pado on 4/22/20.
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
+import PhotoData
 import UIKit
 
 class PreviewViewController: UIViewController {
     init(imageData: Data, originalData: Data) {
-        lowQualityImage = UIImage(data: imageData)
-        highQualityImage = UIImage(data: originalData)
+        guard let lowQualityImage = UIImage(data: imageData),
+              let highQualityImage = UIImage(data: originalData)
+        else {
+            fatalError("Invalid image data")
+        }
+
+        self.lowQualityImage = lowQualityImage
+        self.highQualityImage = highQualityImage
+
         compression = Compression(compressedData: imageData, originalData: originalData)
         previewActionsViewController =  PreviewActionsViewController(compression: compression)
         super.init(nibName: nil, bundle: nil)
@@ -24,12 +32,16 @@ class PreviewViewController: UIViewController {
     }
 
     @objc func saveImage() {
-
+        LibraryWriter.write(lowQualityImage) { [weak self] result in
+            DispatchQueue.main.async { [weak self] in
+                let alert = PreviewSaveAlertFactory.alert(for: result)
+                self?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 
     @objc func shareImage() {
-        guard let image = lowQualityImage else { return }
-        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [lowQualityImage], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
 
@@ -65,8 +77,8 @@ class PreviewViewController: UIViewController {
     // MARK: Boilerplate
 
     private let compression: Compression
-    private let lowQualityImage: UIImage?
-    private let highQualityImage: UIImage?
+    private let lowQualityImage: UIImage
+    private let highQualityImage: UIImage
     private let previewView = PreviewView()
     private let previewActionsViewController: PreviewActionsViewController
 

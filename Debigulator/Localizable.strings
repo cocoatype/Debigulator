@@ -19,6 +19,12 @@
 
 "PreviewSaveActionButton.title" = "Save Image";
 
+"PreviewSaveAlertFactory.dismissButtonTitle" = "OK";
+"PreviewSaveAlertFactory.failureMessage" = "Saving the image to your photo library was unsuccessful.";
+"PreviewSaveAlertFactory.failureTitle" = "Save Failed";
+"PreviewSaveAlertFactory.successMessage" = "The shrunken image was saved to your photo library.";
+"PreviewSaveAlertFactory.successTitle" = "Image Saved";
+
 "PreviewShareActionButton.title" = "Share Image";
 
 "SettingsContentProvider.Item.contact" = "Contact the Developer";
