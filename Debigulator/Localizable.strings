@@ -41,5 +41,5 @@
 "SettingsViewController.navigationTitle" = "Debigulator Help";
 
 "TutorialIntroView.headerText" = "Welcome to\nDebigulator";
-"TutorialIntroView.bodyText" = "Congratulations! You are now the owner of a brand-new Debigulator Mark I! The Debigulator uses advanced quantum minification science to shrink images prior to transport, making transportation much quicker.\n\nTo begin using your new Debigulator, simply engage the Photo Intake Processor using the button below.";
+"TutorialIntroView.bodyText" = "Congratulations! You are now the owner of a brand-new Debigulator Mark II! The Debigulator uses advanced quantum minification science to shrink images prior to transport, making transportation much quicker.\n\nTo begin using your new Debigulator, simply engage the Photo Intake Processor using the button below.";
 "TutorialIntroStartButton.title" = "Enable Photo Intake";

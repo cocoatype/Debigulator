@@ -30,6 +30,7 @@ open class PhotosViewController: UIViewController, UICollectionViewDelegate {
         let asset = dataSource.asset(at: indexPath)
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
+        options.isNetworkAccessAllowed = true
         imageManager.requestImageDataAndOrientation(for: asset, options: options) { [weak self] imageData, _, orientation, _ in
             guard let imageData = imageData, let image = UIImage(data: imageData) else {
                 fatalError("Unable to fetch image from photo library")

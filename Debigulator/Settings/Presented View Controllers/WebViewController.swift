@@ -18,7 +18,7 @@ class WebViewController: SFSafariViewController {
 
     private var isDarkMode: Bool { return traitCollection.userInterfaceStyle == .dark }
 
-    private static let websiteBase = URL(string: "https://cocoatype.com/debigulator")
+    private static let websiteBase = URL(string: "https://debigulator.app")
     static func websiteURL(withPath path: String) -> URL? {
         return websiteBase?.appendingPathComponent(path)
     }
