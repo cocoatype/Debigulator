@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0424AC7824E9637600DC0207 /* GeometryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7724E9637600DC0207 /* GeometryExtensions.swift */; };
 		0424AC7A24E9694B00DC0207 /* PhotoCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7924E9694B00DC0207 /* PhotoCompressor.swift */; };
+		0424AC7C24EA1E9E00DC0207 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7B24EA1E9E00DC0207 /* Compression.swift */; };
 		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		04761AF32453E6AD00B6869A /* StandardContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACB2453E6AD00B6869A /* StandardContentItem.swift */; };
 		04761AF42453E6AD00B6869A /* SettingsContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */; };
@@ -143,6 +144,7 @@
 /* Begin PBXFileReference section */
 		0424AC7724E9637600DC0207 /* GeometryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryExtensions.swift; sourceTree = "<group>"; };
 		0424AC7924E9694B00DC0207 /* PhotoCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCompressor.swift; sourceTree = "<group>"; };
+		0424AC7B24EA1E9E00DC0207 /* Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compression.swift; sourceTree = "<group>"; };
 		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		04761ACB2453E6AD00B6869A /* StandardContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardContentItem.swift; sourceTree = "<group>"; };
 		04761ACC2453E6AD00B6869A /* SettingsContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContentItem.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				04937656245136DE0018B6F3 /* PreviewViewController.swift */,
 				0493765824513B880018B6F3 /* PreviewView.swift */,
 				0493765A24513BA40018B6F3 /* PreviewImageView.swift */,
+				0424AC7B24EA1E9E00DC0207 /* Compression.swift */,
 			);
 			path = "Preview View";
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				04761B182453EF9F00B6869A /* PhotoPermissionsDeniedAlertController.swift in Sources */,
 				049375BB243198B20018B6F3 /* SceneDelegate.swift in Sources */,
 				04761AFE2453E6AD00B6869A /* AcknowledgementsItem.swift in Sources */,
+				0424AC7C24EA1E9E00DC0207 /* Compression.swift in Sources */,
 				04761AF82453E6AD00B6869A /* SocialSection.swift in Sources */,
 				04761AFC2453E6AD00B6869A /* ContactItem.swift in Sources */,
 				04937646244E9D0F0018B6F3 /* TutorialIntroBodyLabel.swift in Sources */,

@@ -7,7 +7,7 @@ class PreviewViewController: UIViewController {
     init(imageData: Data, originalData: Data) {
         lowQualityImage = UIImage(data: imageData)
         highQualityImage = UIImage(data: originalData)
-        compression = Double(imageData.count) / Double(originalData.count)
+        compression = Compression(compressedData: imageData, originalData: originalData)
         super.init(nibName: nil, bundle: nil)
 
         edgesForExtendedLayout = .top
@@ -57,7 +57,7 @@ class PreviewViewController: UIViewController {
 
     // MARK: Boilerplate
 
-    private let compression: Double
+    private let compression: Compression
     private let lowQualityImage: UIImage?
     private let highQualityImage: UIImage?
     private let previewView = PreviewView()
