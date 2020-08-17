@@ -24,6 +24,9 @@ class PreviewView: UIView {
     var isFocusing = false {
         didSet {
             backgroundColor = (isFocusing ? .black : .systemBackground)
+            actionsViewHiddenConstraint?.isActive = isFocusing
+            actionsViewVisibleConstraint?.isActive = !isFocusing
+            layoutIfNeeded()
         }
     }
 
@@ -59,6 +62,9 @@ class PreviewView: UIView {
 
     // MARK: Actions
 
+    private var actionsViewVisibleConstraint: NSLayoutConstraint?
+    private var actionsViewHiddenConstraint: NSLayoutConstraint?
+
     func install(_ actionsViewController: PreviewActionsViewController) {
         guard let view = actionsViewController.view else {
             fatalError("Actions view controller installed before loading view")
@@ -66,10 +72,13 @@ class PreviewView: UIView {
 
         addSubview(view)
 
+        actionsViewVisibleConstraint = view.bottomAnchor.constraint(equalTo: bottomAnchor)
+        actionsViewHiddenConstraint = view.topAnchor.constraint(equalTo: bottomAnchor)
+
         NSLayoutConstraint.activate([
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            view.leadingAnchor.constraint(equalTo: leadingAnchor)
+            view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            actionsViewVisibleConstraint! // oh no a nasty !
         ])
     }
 

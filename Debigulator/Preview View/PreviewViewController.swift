@@ -73,6 +73,7 @@ class PreviewViewController: UIViewController {
     // MARK: Status Bar
 
     override var prefersStatusBarHidden: Bool { isFocusing }
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { .slide }
 
     // MARK: Boilerplate
 
