@@ -3,28 +3,14 @@
 
 import UIKit
 
-class TutorialIntroStartButton: UIButton {
-    init() {
-        super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .appAccent
-        titleLabel?.adjustsFontSizeToFitWidth = true
-        titleLabel?.font = .tutorialButtonFont
-        titleLabel?.textAlignment = .center
-        setTitleColor(.black, for: .normal)
+class TutorialIntroStartButton: ActionButton {
+    override init() {
+        super.init()
         setTitle(Self.title, for: .normal)
-        layer.cornerRadius = 8
-
         addTarget(nil, action: #selector(SceneViewController.requestPhotoPermissions), for: .primaryActionTriggered)
     }
 
     // MARK: Boilerplate
 
     private static let title = NSLocalizedString("TutorialIntroStartButton.title", comment: "Title for the button to start the tutorial")
-
-    @available(*, unavailable)
-    required init(coder: NSCoder) {
-        let typeName = NSStringFromClass(type(of: self))
-        fatalError("\(typeName) does not implement init(coder:)")
-    }
 }

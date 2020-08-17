@@ -8,19 +8,26 @@ class PreviewViewController: UIViewController {
         lowQualityImage = UIImage(data: imageData)
         highQualityImage = UIImage(data: originalData)
         compression = Compression(compressedData: imageData, originalData: originalData)
+        previewActionsViewController =  PreviewActionsViewController(compression: compression)
         super.init(nibName: nil, bundle: nil)
+
+        addChild(previewActionsViewController)
 
         edgesForExtendedLayout = .top
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
     }
 
     override func loadView() {
         previewView.image = lowQualityImage
+        previewView.install(previewActionsViewController)
         view = previewView
     }
 
-    @objc private func shareImage() {
+    @objc func saveImage() {
+
+    }
+
+    @objc func shareImage() {
         guard let image = lowQualityImage else { return }
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
@@ -61,6 +68,7 @@ class PreviewViewController: UIViewController {
     private let lowQualityImage: UIImage?
     private let highQualityImage: UIImage?
     private let previewView = PreviewView()
+    private let previewActionsViewController: PreviewActionsViewController
 
     @available(*, unavailable)
     required init(coder: NSCoder) {

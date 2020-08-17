@@ -57,6 +57,22 @@ class PreviewView: UIView {
         }
     }
 
+    // MARK: Actions
+
+    func install(_ actionsViewController: PreviewActionsViewController) {
+        guard let view = actionsViewController.view else {
+            fatalError("Actions view controller installed before loading view")
+        }
+
+        addSubview(view)
+
+        NSLayoutConstraint.activate([
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+    }
+
     // MARK: Boilerplate
 
     private let imageView = PreviewImageView()

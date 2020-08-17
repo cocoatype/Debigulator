@@ -1,6 +1,8 @@
 //  Created by Geoff Pado on 4/20/20.
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
+"ContactMailViewController.emailSubject" = "Hello!";
+
 "PhotoPermissionsDeniedAlertController.alertTitle" = "No Access to Your Photos";
 "PhotoPermissionsDeniedAlertController.alertMessage" = "Debigulator needs permission to edit your photos. Open Settings to grant access.";
 "PhotoPermissionsDeniedAlertController.actionButtonTitle" = "Open Settings";
@@ -11,6 +13,13 @@
 "PhotoPermissionsRestrictedAlertController.dismissButtonTitle" = "Dismiss";
 
 "PhotosViewController.navigationTitle" = "Photos";
+
+"PreviewCompressionLabel.compressedText" = "%d× smaller!";
+"PreviewCompressionLabel.notCompressedText" = "Image already at max debigulation. 😢";
+
+"PreviewSaveActionButton.title" = "Save Image";
+
+"PreviewShareActionButton.title" = "Share Image";
 
 "SettingsContentProvider.Item.contact" = "Contact the Developer";
 "SettingsContentProvider.Item.privacy" = "Privacy Policy";
