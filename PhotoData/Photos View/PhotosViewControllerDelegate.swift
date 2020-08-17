@@ -4,5 +4,5 @@
 import UIKit
 
 public protocol PhotosViewControllerDelegate: class {
-    func didFetchImageData(_ imageData: Data, highQualityImage: UIImage)
+    func didFetchImageData(_ imageData: Data, originalData: Data)
 }

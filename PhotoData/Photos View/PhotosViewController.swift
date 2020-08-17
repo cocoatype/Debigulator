@@ -25,18 +25,18 @@ open class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     // MARK: Collection View Delegate
+
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let asset = dataSource.asset(at: indexPath)
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
-        let targetSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
-        imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: options) { [weak self] image, _ in
-            guard let image = image else {
+        imageManager.requestImageDataAndOrientation(for: asset, options: options) { [weak self] imageData, _, orientation, _ in
+            guard let imageData = imageData, let image = UIImage(data: imageData) else {
                 fatalError("Unable to fetch image from photo library")
             }
 
-            let imageData = PhotoCompressor.compressedData(from: image)
-            self?.delegate?.didFetchImageData(imageData, highQualityImage: image)
+            let compressedData = PhotoCompressor.compressedData(from: image)
+            self?.delegate?.didFetchImageData(compressedData, originalData: imageData)
         }
     }
     

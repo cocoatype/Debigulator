@@ -4,9 +4,10 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
-    init(imageData: Data, highQualityImage: UIImage) {
-        self.lowQualityImage = UIImage(data: imageData)
-        self.highQualityImage = highQualityImage
+    init(imageData: Data, originalData: Data) {
+        lowQualityImage = UIImage(data: imageData)
+        highQualityImage = UIImage(data: originalData)
+        compression = Double(imageData.count) / Double(originalData.count)
         super.init(nibName: nil, bundle: nil)
 
         edgesForExtendedLayout = .top
@@ -56,6 +57,7 @@ class PreviewViewController: UIViewController {
 
     // MARK: Boilerplate
 
+    private let compression: Double
     private let lowQualityImage: UIImage?
     private let highQualityImage: UIImage?
     private let previewView = PreviewView()
