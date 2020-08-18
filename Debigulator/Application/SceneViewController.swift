@@ -2,9 +2,10 @@
 //  Copyright © 2020 Cocoatype. All rights reserved.
 
 import PhotoData
+import PhotosUI
 import UIKit
 
-class SceneViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
+class SceneViewController: UIViewController, UIAdaptivePresentationControllerDelegate, PHPickerViewControllerDelegate {
     init() {
         super.init(nibName: nil, bundle: nil)
         embed(NavigationController())
@@ -63,6 +64,35 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         } catch {}
     }
 
+    // MARK: Photo Picker
+
+    @available(iOS 14.0, *)
+    @objc func showPhotoPicker() {
+        let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.view.tintColor = .appAccent
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    @available(iOS 14.0, *)
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        dismiss(animated: true)
+        guard let result = results.first else { return }
+
+        let itemProvider = result.itemProvider
+        guard let typeIdentifier = itemProvider.registeredTypeIdentifiers.first else { return }
+
+        itemProvider.loadDataRepresentation(forTypeIdentifier: typeIdentifier) { [weak self] data, _ in
+            guard let data = data, let image = UIImage(data: data) else { return }
+            let compressedData = PhotoCompressor.compressedData(from: image)
+
+            DispatchQueue.main.async { [weak self] in
+                self?.sceneNavigationController?.didFetchImageData(compressedData, originalData: data)
+            }
+        }
+    }
+
     // MARK: Presentation Controller Delegate
 
     func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
@@ -92,6 +122,10 @@ class MainAppPhotosViewController: PhotosViewController {
 
         navigationItem.title = Self.navigationTitle
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "questionmark.circle"), style: .plain, target: nil, action: #selector(SceneViewController.showHelp))
+
+        if #available(iOS 14.0, *) {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: #selector(SceneViewController.showPhotoPicker))
+        }
     }
 
     private static let navigationTitle = NSLocalizedString("PhotosViewController.navigationTitle", comment: "Title when displayed in a navigation controller")
