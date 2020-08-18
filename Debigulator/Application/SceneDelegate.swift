@@ -12,13 +12,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = SceneWindow(windowScene: windowScene)
         window.makeKeyAndVisible()
         self.window = window
+
+        if let url = connectionOptions.urlContexts.first?.url {
+            openPhoto(at: url)
+        }
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let sceneViewController = window?.rootViewController as? SceneViewController,
-              let url = URLContexts.first?.url
-        else { return }
+        guard let url = URLContexts.first?.url else { return }
 
-        sceneViewController.openPhoto(at: url)
+        openPhoto(at: url)
+    }
+
+    // MARK: External
+
+    private func openPhoto(at url: URL) {
+        let sceneViewController = window?.rootViewController as? SceneViewController
+        sceneViewController?.openPhoto(at: url)
     }
 }
