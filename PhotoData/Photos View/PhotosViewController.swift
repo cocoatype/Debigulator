@@ -17,6 +17,11 @@ open class PhotosViewController: UIViewController, UICollectionViewDelegate {
         view = collectionView
     }
 
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+
     public func requestPhotoPermissions(_ completionHandler: ((PHAuthorizationStatus) -> Void)? = nil) {
         requester.requestAuthorization { [weak self] status in
             self?.collectionView.reloadData()
