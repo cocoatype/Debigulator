@@ -3,8 +3,8 @@
 
 import UIKit
 
-enum PhotoCompressor {
-    static func compressedData(from image: UIImage) -> Data {
+public enum PhotoCompressor {
+    public static func compressedData(from image: UIImage) -> Data {
         let imageRect = CGRect(size: image.size)
         let targetRect = CGRect(size: Self.targetSize)
         let scaledRect = imageRect.fitting(rect: targetRect).integral

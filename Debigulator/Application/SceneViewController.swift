@@ -52,6 +52,17 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
         dismiss(animated: true)
     }
 
+    // MARK: External Photo Loading
+
+    func openPhoto(at url: URL) {
+        do {
+            let originalData = try Data(contentsOf: url)
+            guard let image = UIImage(data: originalData) else { return }
+            let compressedData = PhotoCompressor.compressedData(from: image)
+            sceneNavigationController?.didFetchImageData(compressedData, originalData: originalData)
+        } catch {}
+    }
+
     // MARK: Presentation Controller Delegate
 
     func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {

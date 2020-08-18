@@ -13,4 +13,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         self.window = window
     }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let sceneViewController = window?.rootViewController as? SceneViewController,
+              let url = URLContexts.first?.url
+        else { return }
+
+        sceneViewController.openPhoto(at: url)
+    }
 }
