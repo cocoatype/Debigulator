@@ -27,6 +27,8 @@
 
 "PreviewShareActionButton.title" = "Share Image";
 
+"PreviewViewController.title" = "Compressed Image";
+
 "SettingsContentProvider.Item.contact" = "Contact the Developer";
 "SettingsContentProvider.Item.privacy" = "Privacy Policy";
 "SettingsContentProvider.Item.releaseNotes" = "What's New?";

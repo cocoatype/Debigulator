@@ -6,6 +6,8 @@ import UIKit
 
 class PreviewViewController: UIViewController {
     init(imageData: Data, originalData: Data) {
+        self.compressedData = imageData
+
         guard let lowQualityImage = UIImage(data: imageData),
               let highQualityImage = UIImage(data: originalData)
         else {
@@ -41,7 +43,7 @@ class PreviewViewController: UIViewController {
     }
 
     @objc func shareImage() {
-        let activityViewController = UIActivityViewController(activityItems: [lowQualityImage], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [CompressedImageActivitySource(data: compressedData)], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
 
@@ -80,6 +82,7 @@ class PreviewViewController: UIViewController {
     private let compression: Compression
     private let lowQualityImage: UIImage
     private let highQualityImage: UIImage
+    private let compressedData: Data
     private let previewView = PreviewView()
     private let previewActionsViewController: PreviewActionsViewController
 

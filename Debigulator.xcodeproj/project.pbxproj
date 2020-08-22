@@ -91,6 +91,7 @@
 		0493765924513B880018B6F3 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765824513B880018B6F3 /* PreviewView.swift */; };
 		0493765B24513BA40018B6F3 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765A24513BA40018B6F3 /* PreviewImageView.swift */; };
 		0493766024513E7C0018B6F3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765F24513E7C0018B6F3 /* Colors.swift */; };
+		04B537F524F0B7F500C106AB /* CompressedImageActivitySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B537F424F0B7F500C106AB /* CompressedImageActivitySource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +239,7 @@
 		0493765824513B880018B6F3 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		0493765A24513BA40018B6F3 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
 		0493765F24513E7C0018B6F3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04B537F424F0B7F500C106AB /* CompressedImageActivitySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressedImageActivitySource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,6 +501,7 @@
 				0424AC8524EA315200DC0207 /* PreviewSaveActionButton.swift */,
 				0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */,
 				0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */,
+				04B537F424F0B7F500C106AB /* CompressedImageActivitySource.swift */,
 			);
 			path = "Preview View";
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				04761B0C2453E6AD00B6869A /* SettingsTableViewCellImageView.swift in Sources */,
 				04937648244E9D0F0018B6F3 /* TutorialIntroHeaderLabel.swift in Sources */,
 				0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */,
+				04B537F524F0B7F500C106AB /* CompressedImageActivitySource.swift in Sources */,
 				04761AF62453E6AD00B6869A /* OtherAppsSection.swift in Sources */,
 				0493764A244E9D0F0018B6F3 /* TutorialIntroButtonsStackView.swift in Sources */,
 				04761B092453E6AD00B6869A /* PrivacyViewController.swift in Sources */,
