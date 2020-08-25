@@ -34,6 +34,7 @@
 "SettingsContentProvider.Item.contact" = "Contact the Developer";
 "SettingsContentProvider.Item.privacy" = "Privacy Policy";
 "SettingsContentProvider.Item.releaseNotes" = "What's New?";
+"SettingsContentProvider.Item.shortcuts" = "Enable Shortcuts Support";
 "SettingsContentProvider.Item.twitch" = "Twitch";
 "SettingsContentProvider.Item.twitch.subtitle" = "cocoatype";
 "SettingsContentProvider.Item.twitter" = "Twitter";
@@ -43,6 +44,15 @@
 "SettingsContentProvider.Section.social.header" = "Social Media";
 
 "SettingsViewController.navigationTitle" = "Debigulator Help";
+
+"ShortcutsPermissionsDeniedAlertController.alertTitle" = "No Access to Shortcuts";
+"ShortcutsPermissionsDeniedAlertController.alertMessage" = "Debigulators needs permission to add shortcuts. Open Settings to grant access.";
+"ShortcutsPermissionsDeniedAlertController.actionButtonTitle" = "Open Settings";
+"ShortcutsPermissionsDeniedAlertController.cancelButtonTitle" = "Dismiss";
+
+"ShortcutsPermissionsRestrictedAlertController.alertTitle" = "Shortcuts Access Restricted";
+"ShortcutsPermissionsRestrictedAlertController.alertMessage" = "Debigulator needs permission to add shortcuts. However, restrictions on your device prevent that access. Ask whoever controls permissions for you to grant access to Siri to Debigulator.";
+"ShortcutsPermissionsRestrictedAlertController.dismissButtonTitle" = "Dismiss";
 
 "TutorialIntroView.headerText" = "Welcome to\nDebigulator";
 "TutorialIntroView.bodyText" = "Congratulations! You are now the owner of a brand-new Debigulator Mark II! The Debigulator uses advanced quantum minification science to shrink images prior to transport, making transportation much quicker.\n\nTo begin using your new Debigulator, simply engage the Photo Intake Processor using the button below.";

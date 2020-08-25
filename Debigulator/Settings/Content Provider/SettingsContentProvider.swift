@@ -46,10 +46,11 @@ class SettingsContentProvider: NSObject {
 
         sections.append(contentsOf: ([
             AboutSection(),
+            SettingsSection(),
             OtherAppsSection(otherApps: otherAppEntries),
             SocialSection()
         ] as [SettingsContentSection]))
 
-        return sections
+        return sections.filter { $0.items.count > 0 }
     }
 }

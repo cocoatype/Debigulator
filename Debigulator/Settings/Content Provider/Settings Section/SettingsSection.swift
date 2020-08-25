@@ -4,5 +4,13 @@
 struct SettingsSection: SettingsContentSection {
     var header: String? { return nil }
 
-    let items: [SettingsContentItem] = []
+    var items: [SettingsContentItem] {
+        var items = [SettingsContentItem]()
+
+        if ShortcutsPermissionsRequester().authorizationStatus != .authorized {
+            items.append(ShortcutsItem())
+        }
+
+        return items
+    }
 }

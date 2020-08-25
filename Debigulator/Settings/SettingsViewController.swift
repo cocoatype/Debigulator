@@ -38,6 +38,14 @@ class SettingsViewController: UIViewController {
 
     // MARK: User Interface
 
+    @objc func displayAlert(_ sender: Any, event: AlertEvent) {
+        present(event.alert, animated: true)
+    }
+
+    @objc func reloadSettingsSection() {
+        tableView?.reloadData()
+    }
+
     private func deselectSelectedRows() {
         guard let tableView = tableView,
           let selectedRowIndex = tableView.indexPathForSelectedRow

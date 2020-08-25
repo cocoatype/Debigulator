@@ -37,6 +37,12 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Debigulator requires access to your photos in order to shrink them for transport.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Debigulator can be used with the Shortcuts app to automate shrinking images.</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>DebigulateImageIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
