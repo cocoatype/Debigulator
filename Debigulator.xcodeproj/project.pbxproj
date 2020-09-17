@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406C2F325130E45005BC8E2 /* PhotoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; };
 		0424AC7824E9637600DC0207 /* GeometryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7724E9637600DC0207 /* GeometryExtensions.swift */; };
 		0424AC7A24E9694B00DC0207 /* PhotoCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7924E9694B00DC0207 /* PhotoCompressor.swift */; };
 		0424AC7C24EA1E9E00DC0207 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC7B24EA1E9E00DC0207 /* Compression.swift */; };
@@ -103,6 +104,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0406C2EC25130C61005BC8E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04937613244E8D840018B6F3;
+			remoteInfo = PhotoData;
+		};
+		0406C2F525130E45005BC8E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04937613244E8D840018B6F3;
+			remoteInfo = PhotoData;
+		};
 		04937609244E8CC20018B6F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
@@ -111,20 +126,6 @@
 			remoteInfo = MessageExtension;
 		};
 		04937619244E8D840018B6F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04937613244E8D840018B6F3;
-			remoteInfo = PhotoData;
-		};
-		0493762E244E91530018B6F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04937613244E8D840018B6F3;
-			remoteInfo = PhotoData;
-		};
-		04937632244E91580018B6F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 049375AD243198B20018B6F3 /* Project object */;
 			proxyType = 1;
@@ -295,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0406C2F325130E45005BC8E2 /* PhotoData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,8 +637,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0493762F244E91530018B6F3 /* PBXTargetDependency */,
-				04937633244E91580018B6F3 /* PBXTargetDependency */,
+				0406C2ED25130C61005BC8E2 /* PBXTargetDependency */,
 			);
 			name = MessageExtension;
 			productName = MessageExtension;
@@ -672,6 +673,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0406C2F625130E45005BC8E2 /* PBXTargetDependency */,
 			);
 			name = Shortcuts;
 			productName = Shortcuts;
@@ -872,6 +874,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0406C2ED25130C61005BC8E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04937613244E8D840018B6F3 /* PhotoData */;
+			targetProxy = 0406C2EC25130C61005BC8E2 /* PBXContainerItemProxy */;
+		};
+		0406C2F625130E45005BC8E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04937613244E8D840018B6F3 /* PhotoData */;
+			targetProxy = 0406C2F525130E45005BC8E2 /* PBXContainerItemProxy */;
+		};
 		0493760A244E8CC20018B6F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 049375FD244E8CC20018B6F3 /* MessageExtension */;
@@ -881,16 +893,6 @@
 			isa = PBXTargetDependency;
 			target = 04937613244E8D840018B6F3 /* PhotoData */;
 			targetProxy = 04937619244E8D840018B6F3 /* PBXContainerItemProxy */;
-		};
-		0493762F244E91530018B6F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04937613244E8D840018B6F3 /* PhotoData */;
-			targetProxy = 0493762E244E91530018B6F3 /* PBXContainerItemProxy */;
-		};
-		04937633244E91580018B6F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04937613244E8D840018B6F3 /* PhotoData */;
-			targetProxy = 04937632244E91580018B6F3 /* PBXContainerItemProxy */;
 		};
 		04B5380F24F0BB1200C106AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1031,7 +1033,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
@@ -1043,6 +1046,7 @@
 				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1054,7 +1058,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
@@ -1066,6 +1071,7 @@
 				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1076,7 +1082,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
@@ -1089,6 +1096,7 @@
 				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.MessageExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator.MessageExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1100,7 +1108,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
@@ -1113,6 +1122,7 @@
 				MARKETING_VERSION = 20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.MessageExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator.MessageExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1123,10 +1133,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 287EDDET2B;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1139,8 +1149,9 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1154,10 +1165,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 287EDDET2B;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1170,8 +1181,9 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.PhotoData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1185,7 +1197,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Shortcuts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1196,6 +1209,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator.Shortcuts";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1206,7 +1220,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Shortcuts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1217,6 +1232,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.cocoatype.Debigulator.Shortcuts";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

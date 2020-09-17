@@ -1,0 +1,30 @@
+min_fastlane_version("2.73.0")
+
+default_platform(:ios)
+
+platform(:ios) do
+  desc "Runs all the tests"
+  lane :test do
+  end
+
+  desc "Submit a new beta build to App Store Connect"
+  lane :beta do
+    # Download signing credentials
+    sync_code_signing(readonly: true)
+    
+    # Set the build number to the number of Git commits
+    build_number = sh "git log --oneline | wc -l"
+    increment_build_number(build_number: build_number)
+
+    # Build the app for App Store
+    build_app(
+      export_method: "app-store",
+      scheme: "Debigulator")
+    
+    # Just upload the build to App Store Connect, no other changes
+    upload_to_testflight(
+      app_platform: "ios",
+      skip_submission: true,
+      skip_waiting_for_build_processing: true)
+  end
+end

@@ -1,0 +1,7 @@
+git_url("git@git.pado.name:pado/certificates.git")
+
+storage_mode("git")
+
+type("appstore")
+
+app_identifier(["com.cocoatype.Debigulator", "com.cocoatype.Debigulator.MessageExtension", "com.cocoatype.Debigulator.Shortcuts"])
