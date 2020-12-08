@@ -6,11 +6,7 @@ import Photos
 
 class TutorialCoordinator: NSObject {
     static var shouldStartTutorial: Bool {
-        return photosNotGranted || forceShowTutorial || Defaults.seenIntro == false
-    }
-
-    static var photosNotGranted: Bool {
-        return PHPhotoLibrary.authorizationStatus() != .authorized
+        return forceShowTutorial || Defaults.seenIntro == false
     }
 
     // MARK: Override
