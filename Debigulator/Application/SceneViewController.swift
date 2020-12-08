@@ -27,18 +27,7 @@ class SceneViewController: UIViewController, UIAdaptivePresentationControllerDel
 
     @objc func requestPhotoPermissions() {
         photoViewController?.requestPhotoPermissions() { [weak self] status in
-            switch status {
-            case .authorized:
-                self?.dismiss(animated: true)
-            case .restricted:
-                self?.presentedViewController?.present(PhotoPermissionsRestrictedAlertFactory.alert, animated: true)
-            case .denied:
-                self?.presentedViewController?.present(PhotoPermissionsDeniedAlertFactory.alert, animated: true)
-            case .notDetermined:
-                fallthrough
-            @unknown default:
-                break
-            }
+            self?.dismiss(animated: true)
         }
     }
 
