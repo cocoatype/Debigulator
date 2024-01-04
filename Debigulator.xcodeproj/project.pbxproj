@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -65,7 +65,7 @@
 		049375FF244E8CC20018B6F3 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049375E8244E8C530018B6F3 /* Messages.framework */; };
 		04937602244E8CC20018B6F3 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937601244E8CC20018B6F3 /* MessagesViewController.swift */; };
 		04937607244E8CC20018B6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04937606244E8CC20018B6F3 /* Assets.xcassets */; };
-		0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 049375FE244E8CC20018B6F3 /* MessageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 049375FE244E8CC20018B6F3 /* MessageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04937618244E8D840018B6F3 /* PhotoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04937616244E8D840018B6F3 /* PhotoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0493761B244E8D840018B6F3 /* PhotoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; };
 		0493761C244E8D840018B6F3 /* PhotoData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -98,7 +98,7 @@
 		0493766024513E7C0018B6F3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765F24513E7C0018B6F3 /* Colors.swift */; };
 		04B537F524F0B7F500C106AB /* CompressedImageActivitySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B537F424F0B7F500C106AB /* CompressedImageActivitySource.swift */; };
 		04B5380C24F0BB1200C106AB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5380B24F0BB1200C106AB /* IntentHandler.swift */; };
-		04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04B5380924F0BB1200C106AB /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04B5380924F0BB1200C106AB /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04B5381524F0BB3100C106AB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 04B5381424F0BB3100C106AB /* Intents.intentdefinition */; };
 		04B5381624F0C30900C106AB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 04B5381424F0BB3100C106AB /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
@@ -142,16 +142,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		049375F9244E8C540018B6F3 /* Embed App Extensions */ = {
+		049375F9244E8C540018B6F3 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed App Extensions */,
-				0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed App Extensions */,
+				04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed Foundation Extensions */,
+				0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04937620244E8D840018B6F3 /* Embed Frameworks */ = {
@@ -611,7 +611,7 @@
 				049375B1243198B20018B6F3 /* Sources */,
 				049375B2243198B20018B6F3 /* Frameworks */,
 				049375B3243198B20018B6F3 /* Resources */,
-				049375F9244E8C540018B6F3 /* Embed App Extensions */,
+				049375F9244E8C540018B6F3 /* Embed Foundation Extensions */,
 				04937620244E8D840018B6F3 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -686,8 +686,9 @@
 		049375AD243198B20018B6F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = Cocoatype;
 				TargetAttributes = {
 					049375B4243198B20018B6F3 = {
@@ -917,6 +918,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -939,6 +941,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -950,6 +953,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -978,6 +982,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1000,6 +1005,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1011,6 +1017,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1131,13 +1138,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = PhotoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1147,6 +1155,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1163,12 +1173,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = PhotoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1178,6 +1190,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
