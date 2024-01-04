@@ -3,6 +3,6 @@
 
 import UIKit
 
-public protocol PhotosViewControllerDelegate: class {
+public protocol PhotosViewControllerDelegate: AnyObject {
     func didFetchImageData(_ imageData: Data, originalData: Data)
 }

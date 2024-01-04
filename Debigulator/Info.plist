@@ -35,6 +35,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Debigulator requires access to your photos in order to shrink them for transport.</string>
 	<key>NSSiriUsageDescription</key>

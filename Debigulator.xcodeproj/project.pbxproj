@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		0424AC8824EA316400DC0207 /* PreviewShareActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */; };
 		0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8924EA322E00DC0207 /* LibraryWriter.swift */; };
 		0424AC8C24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */; };
+		042C1FF92B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */; };
 		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		0474822124F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */; };
 		0474822324F4AACD00A0BD34 /* ShortcutsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */; };
@@ -65,7 +66,7 @@
 		049375FF244E8CC20018B6F3 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049375E8244E8C530018B6F3 /* Messages.framework */; };
 		04937602244E8CC20018B6F3 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937601244E8CC20018B6F3 /* MessagesViewController.swift */; };
 		04937607244E8CC20018B6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04937606244E8CC20018B6F3 /* Assets.xcassets */; };
-		0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 049375FE244E8CC20018B6F3 /* MessageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 049375FE244E8CC20018B6F3 /* MessageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04937618244E8D840018B6F3 /* PhotoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04937616244E8D840018B6F3 /* PhotoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0493761B244E8D840018B6F3 /* PhotoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; };
 		0493761C244E8D840018B6F3 /* PhotoData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04937614244E8D840018B6F3 /* PhotoData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -98,7 +99,7 @@
 		0493766024513E7C0018B6F3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493765F24513E7C0018B6F3 /* Colors.swift */; };
 		04B537F524F0B7F500C106AB /* CompressedImageActivitySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B537F424F0B7F500C106AB /* CompressedImageActivitySource.swift */; };
 		04B5380C24F0BB1200C106AB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5380B24F0BB1200C106AB /* IntentHandler.swift */; };
-		04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04B5380924F0BB1200C106AB /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04B5380924F0BB1200C106AB /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04B5381524F0BB3100C106AB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 04B5381424F0BB3100C106AB /* Intents.intentdefinition */; };
 		04B5381624F0C30900C106AB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 04B5381424F0BB3100C106AB /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
@@ -142,16 +143,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		049375F9244E8C540018B6F3 /* Embed App Extensions */ = {
+		049375F9244E8C540018B6F3 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed App Extensions */,
-				0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed App Extensions */,
+				04B5381024F0BB1200C106AB /* Shortcuts.appex in Embed Foundation Extensions */,
+				0493760B244E8CC20018B6F3 /* MessageExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04937620244E8D840018B6F3 /* Embed Frameworks */ = {
@@ -179,6 +180,7 @@
 		0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewShareActionButton.swift; sourceTree = "<group>"; };
 		0424AC8924EA322E00DC0207 /* LibraryWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWriter.swift; sourceTree = "<group>"; };
 		0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSaveAlertFactory.swift; sourceTree = "<group>"; };
+		042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCellLoadingIndicator.swift; sourceTree = "<group>"; };
 		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsPermissionsRequester.swift; sourceTree = "<group>"; };
 		0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsItem.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				049375D324319CD60018B6F3 /* PhotosCollectionView.swift */,
 				049375DA2431A3FC0018B6F3 /* PhotosCollectionViewLayout.swift */,
 				049375DC2431A42C0018B6F3 /* PhotosCollectionViewCell.swift */,
+				042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */,
 				049375E02431A8AB0018B6F3 /* PhotosCollectionViewCellImageView.swift */,
 			);
 			path = "Photos View";
@@ -611,7 +614,7 @@
 				049375B1243198B20018B6F3 /* Sources */,
 				049375B2243198B20018B6F3 /* Frameworks */,
 				049375B3243198B20018B6F3 /* Resources */,
-				049375F9244E8C540018B6F3 /* Embed App Extensions */,
+				049375F9244E8C540018B6F3 /* Embed Foundation Extensions */,
 				04937620244E8D840018B6F3 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -686,8 +689,9 @@
 		049375AD243198B20018B6F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = Cocoatype;
 				TargetAttributes = {
 					049375B4243198B20018B6F3 = {
@@ -852,6 +856,7 @@
 				0424AC7A24E9694B00DC0207 /* PhotoCompressor.swift in Sources */,
 				04937628244E8D9D0018B6F3 /* LibraryDataSource.swift in Sources */,
 				04937627244E8D9D0018B6F3 /* LibraryPermissionsRequester.swift in Sources */,
+				042C1FF92B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift in Sources */,
 				0493762B244E8E3D0018B6F3 /* UIViewControllerExtensions.swift in Sources */,
 				04937626244E8D920018B6F3 /* PhotosCollectionViewCellImageView.swift in Sources */,
 				0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */,
@@ -917,6 +922,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -939,6 +945,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -946,9 +953,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -977,6 +986,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -999,6 +1009,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1006,9 +1017,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1035,7 +1048,6 @@
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1060,7 +1072,6 @@
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1084,7 +1095,6 @@
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1110,7 +1120,6 @@
 				CODE_SIGN_ENTITLEMENTS = MessageExtension/MessageExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1133,14 +1142,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = PhotoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1150,6 +1159,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1166,13 +1177,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = PhotoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1182,6 +1194,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 20.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoatype.Debigulator.PhotoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
