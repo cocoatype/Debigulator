@@ -17,28 +17,37 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 
             let targetSize = bounds.size * UIScreen.main.scale
 
-            assetRequestID = imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: nil) { [weak self] image, info in
-                guard let image = image,
+            let options = PHImageRequestOptions()
+            options.deliveryMode = .opportunistic
+            options.isNetworkAccessAllowed = true
+
+            assetRequestID = imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: options) { [weak self] image, info in
+                guard let image,
                   let requestID = (info?[PHImageResultRequestIDKey] as? NSNumber)?.int32Value,
                   self?.assetRequestID == requestID
                 else { return }
 
+                self?.loadingIndicator.stopAnimating()
                 self?.imageView.image = image
             }
+
+            loadingIndicator.startAnimating()
         }
     }
 
     override init(frame: CGRect) {
-        imageView = PhotosCollectionViewCellImageView()
-
         super.init(frame: .zero)
 
         contentView.addSubview(imageView)
+        contentView.addSubview(loadingIndicator)
+
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
             imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
         ])
 
         isAccessibilityElement = true
@@ -53,7 +62,8 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     // MARK: Boilerplate
 
     private let imageManager = PHImageManager.default()
-    private var imageView: UIImageView
+    private let imageView = PhotosCollectionViewCellImageView()
+    private let loadingIndicator = PhotosCollectionViewCellLoadingIndicator()
 
     private var assetRequestID: PHImageRequestID? {
         didSet {

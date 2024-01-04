@@ -19,6 +19,7 @@
 		0424AC8824EA316400DC0207 /* PreviewShareActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */; };
 		0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8924EA322E00DC0207 /* LibraryWriter.swift */; };
 		0424AC8C24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */; };
+		042C1FF92B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */; };
 		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		0474822124F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */; };
 		0474822324F4AACD00A0BD34 /* ShortcutsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */; };
@@ -179,6 +180,7 @@
 		0424AC8724EA316400DC0207 /* PreviewShareActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewShareActionButton.swift; sourceTree = "<group>"; };
 		0424AC8924EA322E00DC0207 /* LibraryWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWriter.swift; sourceTree = "<group>"; };
 		0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSaveAlertFactory.swift; sourceTree = "<group>"; };
+		042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCellLoadingIndicator.swift; sourceTree = "<group>"; };
 		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsPermissionsRequester.swift; sourceTree = "<group>"; };
 		0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsItem.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				049375D324319CD60018B6F3 /* PhotosCollectionView.swift */,
 				049375DA2431A3FC0018B6F3 /* PhotosCollectionViewLayout.swift */,
 				049375DC2431A42C0018B6F3 /* PhotosCollectionViewCell.swift */,
+				042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */,
 				049375E02431A8AB0018B6F3 /* PhotosCollectionViewCellImageView.swift */,
 			);
 			path = "Photos View";
@@ -853,6 +856,7 @@
 				0424AC7A24E9694B00DC0207 /* PhotoCompressor.swift in Sources */,
 				04937628244E8D9D0018B6F3 /* LibraryDataSource.swift in Sources */,
 				04937627244E8D9D0018B6F3 /* LibraryPermissionsRequester.swift in Sources */,
+				042C1FF92B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift in Sources */,
 				0493762B244E8E3D0018B6F3 /* UIViewControllerExtensions.swift in Sources */,
 				04937626244E8D920018B6F3 /* PhotosCollectionViewCellImageView.swift in Sources */,
 				0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */,
