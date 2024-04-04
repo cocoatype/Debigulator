@@ -3,7 +3,7 @@
 
 import UIKit
 
-class PreviewView: UIView {
+class PreviewView: UIView, UIGestureRecognizerDelegate {
     init() {
         super.init(frame: .zero)
         backgroundColor = .systemBackground
@@ -44,6 +44,7 @@ class PreviewView: UIView {
 
     private lazy var qualityRecognizer: UIGestureRecognizer = {
         let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(toggleQuality))
+        recognizer.delegate = self
         recognizer.minimumPressDuration = 0.1
         recognizer.allowableMovement = .greatestFiniteMagnitude
         return recognizer
@@ -80,6 +81,13 @@ class PreviewView: UIView {
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             actionsViewVisibleConstraint! // oh no a nasty !
         ])
+    }
+
+    // MARK: UIGestureRecognizerDelegate
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        guard gestureRecognizer == qualityRecognizer else { return true }
+        return (touch.view is UIButton) == false
     }
 
     // MARK: Boilerplate
