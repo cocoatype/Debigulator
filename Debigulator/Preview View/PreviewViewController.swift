@@ -34,10 +34,12 @@ class PreviewViewController: UIViewController {
     }
 
     @objc func saveImage() {
-        LibraryWriter.write(lowQualityImage) { [weak self] result in
-            DispatchQueue.main.async { [weak self] in
-                let alert = PreviewSaveAlertFactory.alert(for: result)
-                self?.present(alert, animated: true, completion: nil)
+        Task {
+            do {
+                try await LibraryWriter.write(lowQualityImage)
+                present(PreviewSaveAlertFactory.successAlert, animated: true)
+            } catch {
+                present(PreviewSaveAlertFactory.failureAlert, animated: true)
             }
         }
     }

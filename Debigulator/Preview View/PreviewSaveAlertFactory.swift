@@ -4,18 +4,11 @@
 import UIKit
 
 enum PreviewSaveAlertFactory {
-    static func alert(for result: Result<Void, Error>) -> UIAlertController {
-        switch result {
-        case .success: return successAlert
-        case .failure: return failureAlert
-        }
-    }
-
     // MARK: Success
 
     private static let successTitle = NSLocalizedString("PreviewSaveAlertFactory.successTitle", comment: "Title for the save success alert")
     private static let successMessage = NSLocalizedString("PreviewSaveAlertFactory.successMessage", comment: "Message for the save success alert")
-    private static var successAlert: UIAlertController {
+    public static var successAlert: UIAlertController {
         let alert = UIAlertController(title: successTitle, message: successMessage, preferredStyle: .alert)
         alert.view.tintColor = .appAccent
         alert.addAction(dismissAction)
@@ -26,7 +19,7 @@ enum PreviewSaveAlertFactory {
 
     private static let failureTitle = NSLocalizedString("PreviewSaveAlertFactory.failureTitle", comment: "Title for the save failure alert")
     private static let failureMessage = NSLocalizedString("PreviewSaveAlertFactory.failureMessage", comment: "Message for the save failure alert")
-    private static var failureAlert: UIAlertController {
+    public static var failureAlert: UIAlertController {
         let alert = UIAlertController(title: failureTitle, message: failureMessage, preferredStyle: .alert)
         alert.view.tintColor = .appAccent
         alert.addAction(dismissAction)
