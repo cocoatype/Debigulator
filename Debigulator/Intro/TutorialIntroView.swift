@@ -18,7 +18,7 @@ class TutorialIntroView: UIView {
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             buttonsView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
             buttonsView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
-            buttonsView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22),
+            buttonsView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -22),
             buttonsView.heightAnchor.constraint(equalToConstant: 44),
             buttonsView.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
