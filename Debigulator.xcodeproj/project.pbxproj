@@ -20,6 +20,7 @@
 		0424AC8A24EA322E00DC0207 /* LibraryWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8924EA322E00DC0207 /* LibraryWriter.swift */; };
 		0424AC8C24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */; };
 		042C1FF92B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */; };
+		045F7CCC2EC12AF90011E61B /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 045F7CCB2EC12AF90011E61B /* AppIcon.icon */; };
 		0462456224553FE500CC50E5 /* TutorialIntroScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */; };
 		0474822124F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */; };
 		0474822324F4AACD00A0BD34 /* ShortcutsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */; };
@@ -181,6 +182,7 @@
 		0424AC8924EA322E00DC0207 /* LibraryWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWriter.swift; sourceTree = "<group>"; };
 		0424AC8B24EA38DD00DC0207 /* PreviewSaveAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSaveAlertFactory.swift; sourceTree = "<group>"; };
 		042C1FF82B474E5300D71CC9 /* PhotosCollectionViewCellLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCellLoadingIndicator.swift; sourceTree = "<group>"; };
+		045F7CCB2EC12AF90011E61B /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		0462456124553FE500CC50E5 /* TutorialIntroScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntroScrollView.swift; sourceTree = "<group>"; };
 		0474822024F4A91800A0BD34 /* ShortcutsPermissionsRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsPermissionsRequester.swift; sourceTree = "<group>"; };
 		0474822224F4AACD00A0BD34 /* ShortcutsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsItem.swift; sourceTree = "<group>"; };
@@ -556,6 +558,7 @@
 				049375C3243198B20018B6F3 /* LaunchScreen.storyboard */,
 				049375C6243198B20018B6F3 /* Info.plist */,
 				04937637244E98B50018B6F3 /* Localizable.strings */,
+				045F7CCB2EC12AF90011E61B /* AppIcon.icon */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049375C5243198B20018B6F3 /* LaunchScreen.storyboard in Resources */,
+				045F7CCC2EC12AF90011E61B /* AppIcon.icon in Resources */,
 				04937638244E98B50018B6F3 /* Localizable.strings in Resources */,
 				049375C2243198B20018B6F3 /* Assets.xcassets in Resources */,
 			);
@@ -1045,12 +1049,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1069,12 +1074,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Debigulator/Debigulator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = Debigulator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1097,7 +1103,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1122,7 +1128,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 287EDDET2B;
 				INFOPLIST_FILE = MessageExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
